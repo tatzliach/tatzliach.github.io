@@ -17,14 +17,12 @@
       animation: gradientMove 15s ease infinite;
     }
 
-    /* Animated gradient */
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Twinkling stars */
     body::before {
       content: "";
       position: fixed;
@@ -162,9 +160,13 @@
     button.innerText = "Day " + i;
 
     button.onclick = function() {
-      this.style.background = "gold";
-      this.style.color = "black";
-      this.innerText = "✔ Day " + i;
+      if (i <= 5) {
+        window.location.href = "day-" + i + ".html";
+      } else {
+        this.style.background = "gold";
+        this.style.color = "black";
+        this.innerText = "✔ Day " + i;
+      }
     };
 
     container.appendChild(button);
@@ -172,4 +174,4 @@
 </script>
 
 </body>
-</html>
+  </html>
