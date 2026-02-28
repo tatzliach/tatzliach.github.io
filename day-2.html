@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 - Family & People</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<style>
+body { margin:0; font-family:'Segoe UI',sans-serif; background:linear-gradient(to bottom,#fff9dc,#fffacd); color:#222; text-align:center; overflow-x:hidden; position:relative;}
+.star {position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:0;animation:twinkle 3s infinite;}
+@keyframes twinkle {0%,100%{opacity:0;transform:scale(0.8);}50%{opacity:1;transform:scale(1.5);}}
+.stars-container {position:fixed;width:100%;height:100%;z-index:0;}
+header {margin-top:50px;margin-bottom:30px;position:relative;z-index:2;}
+header h1 {font-size:3rem;font-weight:bold;margin-bottom:10px;text-shadow:0 0 15px #f0e68c;color:#d35400;}
+.highlighted-text {font-size:2rem;font-weight:bold;color:#d35400;margin:20px auto;max-width:700px;padding:20px;border-radius:20px;background:rgba(255,250,200,0.8);box-shadow:0 0 25px rgba(0,0,0,0.1);text-align:center;animation:glow 2.5s infinite alternate;}
+@keyframes glow {0% { box-shadow:0 0 15px rgba(211,84,0,0.5);}100%{box-shadow:0 0 35px rgba(211,84,0,0.8);}}
+.verse {font-size:1.4rem;font-style:italic;margin:25px auto;max-width:800px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);padding:25px;border-radius:20px;box-shadow:0 0 30px rgba(0,0,0,0.08);color:#222;}
+.description-box {font-size:1.15rem;margin:25px auto;max-width:850px;text-align:left;background:rgba(255,250,200,0.85);padding:25px;border-radius:20px;line-height:1.8;box-shadow:0 0 25px rgba(0,0,0,0.08);color:#222;}
+.vocab-list {margin:40px auto;max-width:850px;text-align:left;}
+.vocab-box {margin:15px 0;padding:20px;border-left:6px solid #ffd700;border-radius:15px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);box-shadow:0 0 20px rgba(0,0,0,0.05);transition:all 0.3s ease;color:#222;}
+.vocab-box:hover {transform:translateX(5px) scale(1.02);background:rgba(255,250,200,0.8);}
+.vocab-word {font-weight:bold;color:#c0392b;font-size:1.2rem;margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem;margin-bottom:5px;}
+.vocab-example {font-size:1rem;font-style:italic;}
+footer {margin-bottom:40px;font-size:1rem;opacity:0.85;color:#555;text-shadow:0 0 5px #fffacd;}
+@media screen and (max-width:600px) {.highlighted-text{font-size:1.6rem;padding:15px;} .verse,.description-box,.vocab-box{padding:15px;}}
+</style>
+</head>
+<body>
+
+<div class="stars-container">
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star = document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3+'s';
+  container.appendChild(star);
+}
+</script>
+</div>
+
+<main class="container">
+<header>
+<h1>Day 2 🌟</h1>
+</header>
+
+<div class="highlighted-text">পরিবার ও মানুষ শিখি 👨‍👩‍👧‍👦<br><span style="font-size:1.5rem;color:#d35400;">Family & People Vocabulary 🌟</span></div>
+
+<div class="verse">
+"Fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand." <br>
+<span style="font-weight:bold;color:#d35400;">Isaiah 41:10 🙏</span>
+</div>
+
+<div class="description-box">
+এই ১০টি শব্দ পরিবারের সদস্য এবং পরিচিত মানুষদের জন্য গুরুত্বপূর্ণ। প্রতিদিন ব্যবহার অনুশীলন করুন। 💡
+</div>
+
+<div class="vocab-list">
+<div class="vocab-box"><div class="vocab-word">Father</div><div class="vocab-meaning">বাবা</div><div class="vocab-example">My father is very kind. 👨‍👧</div></div>
+<div class="vocab-box"><div class="vocab-word">Mother</div><div class="vocab-meaning">মা</div><div class="vocab-example">Her mother cooks delicious food. 👩‍🍳</div></div>
+<div class="vocab-box"><div class="vocab-word">Brother</div><div class="vocab-meaning">ভাই</div><div class="vocab-example">I have one brother. 👦</div></div>
+<div class="vocab-box"><div class="vocab-word">Sister</div><div class="vocab-meaning">বোন</div><div class="vocab-example">My sister likes music. 👧</div></div>
+<div class="vocab-box"><div class="vocab-word">Son</div><div class="vocab-meaning">ছেলে</div><div class="vocab-example">Their son is very smart. 🧒</div></div>
+<div class="vocab-box"><div class="vocab-word">Daughter</div><div class="vocab-meaning">মেয়ে</div><div class="vocab-example">Their daughter is playing outside. 👧</div></div>
+<div class="vocab-box"><div class="vocab-word">Family</div><div class="vocab-meaning">পরিবার</div><div class="vocab-example">I love my family. ❤️</div></div>
+<div class="vocab-box"><div class="vocab-word">Friend</div><div class="vocab-meaning">বন্ধু</div><div class="vocab-example">He is my best friend. 🤝</div></div>
+<div class="vocab-box"><div class="vocab-word">Neighbor</div><div class="vocab-meaning">প্রতিবেশী</div><div class="vocab-example">My neighbor is very helpful. 🏘️</div></div>
+<div class="vocab-box"><div class="vocab-word">Teacher</div><div class="vocab-meaning">শিক্ষক</div><div class="vocab-example">The teacher explains well. 👨‍🏫</div></div>
+</div>
+
+<footer>
+© 2026 Tatzliach Education ⭐
+</footer>
+
+</main>
+</body>
+</html>
