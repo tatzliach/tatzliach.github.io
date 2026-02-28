@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 - Greetings</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<style>
+/* ===== Body & Background ===== */
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #222;
+  text-align: center;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #fff9dc, #fffacd);
+  position: relative;
+}
+
+/* ===== Twinkling Stars ===== */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.8);}
+  50% { opacity: 1; transform: scale(1.5);}
+}
+
+.stars-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ===== Header ===== */
+header {
+  margin: 50px 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #f0e68c;
+  color: #d35400;
+}
+
+/* ===== Highlighted Section ===== */
+.highlighted-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d35400;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 250, 200, 0.8);
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px rgba(211, 84, 0,0.5);}
+  100% { box-shadow: 0 0 35px rgba(211, 84, 0,0.8);}
+}
+
+/* ===== Verse Section ===== */
+.verse {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin: 25px auto;
+  max-width: 800px;
+  background: rgba(255,215,0,0.08);
+  border: 2px solid gold;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.4);
+  color: #222;
+  text-align: center;
+}
+
+/* ===== Description Box ===== */
+.description-box {
+  font-size: 1.1rem;
+  margin: 25px auto;
+  max-width: 800px;
+  text-align: left;
+  background: rgba(255, 250, 200,0.8);
+  padding: 25px;
+  border-radius: 20px;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  color: #222;
+}
+
+/* ===== Greeting List ===== */
+.greeting-list {
+  margin: 40px auto;
+  max-width: 750px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  color: #222;
+}
+
+.greeting-list li {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
+}
+
+.greeting-list li:hover {
+  transform: translateX(5px) scale(1.02);
+  background: rgba(255, 250, 200,0.3);
+}
+
+/* ===== To Remember Section ===== */
+.to-remember {
+  margin-top: 50px;
+}
+
+.to-remember h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d35400;
+  text-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.to-remember h4 {
+  font-size: 1.5rem;
+  color: #000000;
+  text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.to-remember-list {
+  margin: 25px auto;
+  max-width: 750px;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  color: #222;
+}
+
+.to-remember-list li {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
+}
+
+.to-remember-list li strong {
+  color: #c0392b;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-bottom: 40px;
+  font-size: 1rem;
+  opacity: 0.85;
+  color: #555;
+  text-shadow: 0 0 5px #fffacd;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 600px) {
+  .highlighted-text { font-size: 1.6rem; padding: 15px; }
+  .verse, .description-box, .greeting-list, .to-remember-list li { padding: 15px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Stars Background -->
+<div class="stars-container"></div>
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0; i<50; i++){
+  const star = document.createElement('div');
+  star.classList.add('star');
+  star.style.top = Math.random()*100 + '%';
+  star.style.left = Math.random()*100 + '%';
+  star.style.animationDelay = Math.random()*3 + 's';
+  container.appendChild(star);
+}
+</script>
+
+<main class="container">
+  <!-- Header -->
+  <header>
+    <h1>⭐ Day 1 ⭐</h1>
+  </header>
+
+  <!-- Highlighted Topic -->
+  <div class="highlighted-text">
+    ইংরেজিতে অভিবাদন করা 🌸<br>
+    <span style="font-size:1.6rem; font-weight:normal;">Greetings in English ⭐</span>
+  </div>
+
+  <!-- Verse -->
+  <div class="verse">
+    "Greet one another with a kiss of love. Peace to all of you who are in Christ."<br>
+    <span style="font-weight:bold; color:#d35400;">1 Peter 5:14</span> 🙏
+  </div>
+
+  <!-- Description -->
+  <div class="description-box">
+    কোনো ব্যক্তির সঙ্গে সাক্ষাৎ হলে আমরা 'নমস্কার', 'কেমন আছেন' ইত্যাদি বলে সম্ভাষণ করি।  
+    বাংলায় দিনে বা রাতে সম্ভাষণ পরিবর্তিত হয় না, কিন্তু ইংরেজিতে সকাল, দুপুর, সন্ধ্যা, রাত্রি অনুযায়ী পরিবর্তন ঘটে।
+  </div>
+
+  <!-- Greetings List -->
+  <ul class="greeting-list">
+    <li>ভোর থেকে দুপুর ১২: <strong>Good morning</strong> 🌅</li>
+    <li>দুপুর ১২ থেকে বিকাল ৫: <strong>Good afternoon</strong> ☀️</li>
+    <li>বিকেল ৫ থেকে রাত ১১: <strong>Good evening</strong> 🌇</li>
+    <li>রাতের বিদায়ের সময়:<br>
+      (i) <strong>Good night</strong> 🌙<br>
+      (ii) <strong>Sweet dreams</strong> 😴
+    </li>
+    <li>যেকোনো সময়ে: <strong>Good day to you</strong> 🌞</li>
+    <li>বিদায় নেওয়ার সময়:<br>
+      (i) <strong>Goodbye</strong> 👋<br>
+      (ii) <strong>Farewell</strong> 🕊<br>
+      (iii) <strong>Bye bye</strong> ✌<br>
+      (iv) <strong>Hope to see you again</strong> 💛
+    </li>
+  </ul>
+
+  <!-- To Remember Section -->
+  <div class="to-remember">
+    <h3>To Remember 📌</h3>
+    <h4>স্মরণীয়</h4>
+    <ul class="to-remember-list">
+      <li>বাংলাতে কাউকে সম্মান দেখানোর জন্য নামের পরে 'বাবু' বা 'মশাই' শব্দটি বসে। কিন্তু ইংরেজিতে নামের আগে বসে- "<strong>Mr.</strong>"। উদাহরণ: <strong>Mr Jose is coming</strong></li>
+      <li>ইংরেজিতে চলিত ভাষায় Father কে <strong>Dad / Daddy</strong> 👨‍👦</li>
+      <li>ইংরেজিতে চলিত ভাষায় Mother কে <strong>Mummy</strong> 👩‍👧</li>
+      <li>ইংরেজিতে চলিত ভাষায় Grandfather কে <strong>Grandpa</strong> 👴</li>
+      <li>ইংরেজিতে চলিত ভাষায় Grandmother কে <strong>Grandma</strong> 👵</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Tatzliach Education
+  </footer>
+</main>
+</body>
+</html>
