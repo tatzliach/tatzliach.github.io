@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 2 - Politeness & Etiquette</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<style>
+/* ===== Body & Background ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff9dc, #fffacd);
+  color: #222;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== Twinkling Stars ===== */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.8);}
+  50% { opacity: 1; transform: scale(1.5);}
+}
+
+.stars-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ===== Header ===== */
+header {
+  margin: 50px 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #f0e68c;
+  color: #d35400;
+}
+
+/* ===== Highlighted Section ===== */
+.highlighted-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d35400;
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 250, 200, 0.8);
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px rgba(211, 84, 0,0.5);}
+  100% { box-shadow: 0 0 35px rgba(211, 84, 0,0.8);}
+}
+
+/* ===== Verse ===== */
+.verse {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin: 25px auto;
+  max-width: 800px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+/* ===== Description Box ===== */
+.description-box {
+  font-size: 1.15rem;
+  margin: 25px auto;
+  max-width: 850px;
+  text-align: left;
+  background: rgba(255, 250, 200,0.85);
+  padding: 25px;
+  border-radius: 20px;
+  line-height: 1.8;
+  box-shadow: 0 0 25px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+/* ===== Greeting List ===== */
+.greeting-list {
+  margin: 40px auto;
+  max-width: 850px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  color: #222;
+}
+
+.greeting-list li {
+  margin: 18px 0;
+  padding-left: 12px;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
+}
+
+.greeting-list li strong { color: #c0392b; font-family: 'Georgia', serif; }
+.greeting-list li ul li { font-family: 'Georgia', serif; color: #222; }
+.greeting-list li:hover { transform: translateX(5px) scale(1.02); background: rgba(255,250,200,0.3); }
+
+/* ===== Polite Expressions ===== */
+.polite-process {
+  margin-top: 50px;
+}
+
+.polite-process h3 { font-size: 2rem; font-weight: bold; color: #d35400; text-shadow: 0 0 8px rgba(0,0,0,0.2); }
+.polite-process h4 { font-size: 1.5rem; color: #000; text-shadow: 0 0 5px rgba(0,0,0,0.2); }
+
+.polite-process-list {
+  margin: 25px auto;
+  max-width: 850px;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  color: #222;
+}
+
+.polite-process-list li {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.5px;
+}
+
+.polite-process-list li span.highlight { color: #c0392b; font-weight: bold; }
+
+/* ===== To Remember ===== */
+.to-remember { margin-top: 50px; }
+
+.to-remember h3 { font-size: 2rem; font-weight: bold; color: #d35400; text-shadow: 0 0 8px rgba(0,0,0,0.2); }
+.to-remember h4 { font-size: 1.5rem; color: #000; text-shadow: 0 0 5px rgba(0,0,0,0.2); }
+
+.to-remember-list {
+  margin: 25px auto;
+  max-width: 850px;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  color: #222;
+}
+
+.to-remember-list li {
+  margin: 14px 0;
+  padding-left: 10px;
+  border-left: 4px solid #ffd700;
+  border-radius: 5px;
+  font-family: 'Georgia', serif;
+}
+
+.to-remember-list li strong { color: #c0392b; }
+
+/* ===== Footer ===== */
+footer { margin-bottom: 40px; font-size: 1rem; opacity: 0.85; color: #555; text-shadow: 0 0 5px #fffacd; }
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 600px) {
+  .highlighted-text { font-size: 1.6rem; padding: 15px; }
+  .verse, .description-box, .greeting-list, .polite-process-list, .to-remember-list li { padding: 15px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars-container"></div>
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0; i<50; i++){
+  const star = document.createElement('div');
+  star.classList.add('star');
+  star.style.top = Math.random()*100 + '%';
+  star.style.left = Math.random()*100 + '%';
+  star.style.animationDelay = Math.random()*3 + 's';
+  container.appendChild(star);
+}
+</script>
+
+<main class="container">
+  <header>
+    <h1>Day 2 🌟</h1>
+  </header>
+
+  <div class="highlighted-text">
+    ভদ্রতা ও শিষ্টাচার 🌸<br>
+    <span style="font-size:1.5rem; color:#d35400;">Politeness and Etiquette 🌟</span>
+  </div>
+
+  <div class="verse">
+    "Finally, all of you be of one mind, having compassion one for another. Love as brethren, be kindhearted, humble." <br>
+    <span style="font-weight:bold; color:#d35400;">1 Peter 3:8 🙏</span>
+  </div>
+
+  <div class="description-box">
+    বিভিন্ন দেশের আচার-আচরণ, শিষ্টাচার, ভদ্রতা, আদব-কায়দা বিভিন্ন রকম। সুতরাং ইংরেজি শিখতে হলে এই ভাষার আদব-কায়দা, শিষ্টাচার, ভদ্রতা ভালোভাবে জানা প্রয়োজন, যাতে ইংরেজীতে ভাব প্রকাশ পূর্ণ রূপে প্রকাশিত হয়। 💡
+  </div>
+
+  <ul class="greeting-list">
+    <li><strong>🌟 Please :</strong> ইংরেজিতে শিষ্টাচার এবং ভদ্রতা প্রকাশের জন্য <span class="highlight">Please</span> অপরিহার্য।
+      <ul>
+        <li>i) 🙏 Please close the door.</li>
+        <li>ii) ☕ Would you like some tea, please tell me?</li>
+        <li>iii) 💬 Please, listen to me once, it's very important.</li>
+        <li>iv) ✏️ Can I have your pen, please.</li>
+      </ul>
+    </li>
+    <li><strong>🌟 Thanks :</strong> <span class="highlight">Thanks</span> শব্দটি ইংরেজিতে বহুল প্রচলিত এবং ভদ্রতার প্রতীক।
+      <ul>
+        <li>i) 🙏 Thank you so much for your help, thanks!</li>
+        <li>ii) 🌸 Thanks a lot for explaining it so nicely.</li>
+        <li>iii) 🎁 Thanks for taking the time to reply, thank you!</li>
+        <li>iv) 😊 I really liked getting this small gift from you, thanks!</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="polite-process">
+    <h3>Some Polite Expressions ✨</h3>
+    <h4>ভদ্র শিষ্টাচারের বাক্যাবলি</h4>
+    <ul class="polite-process-list">
+      <li><span class="highlight">Please wait a moment. ⏳</span></li>
+      <li><span class="highlight">Thank you very much for your help. 🙏</span></li>
+      <li><span class="highlight">Sorry, I got a bit late. 😅</span></li>
+      <li><span class="highlight">Could you please take a look at this? 👀</span></li>
+      <li><span class="highlight">You explained it very well, thank you. 🌟</span></li>
+      <li><span class="highlight">Would you mind closing the door, please? 🚪</span></li>
+    </ul>
+  </div>
+
+  <div class="to-remember">
+    <h3>To Remember 📌</h3>
+    <h4>স্মরণীয়</h4>
+    <ul class="to-remember-list">
+      <li><strong>Excuse 🌟</strong> – কাউকে মনোযোগ আকর্ষণ করতে, হালকাভাবে বাধা দিতে বা ছোট অনুমতি চাইতে।<br>
+        Example: Excuse me, could you tell me the way to the station? 🗺️
+      </li>
+      <li><strong>Forgive 🌟</strong> – গভীর ভুল বা আঘাতের পর কাউকে রাগ ছেড়ে দেওয়ার জন্য।<br>
+        Example: Please forgive me for hurting your feelings. ❤️
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    © 2026 Tatzliach Education ⭐
+  </footer>
+</main>
+</body>
+  </html>
