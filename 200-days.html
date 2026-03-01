@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>200 Days Vocabulary Mission</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: white;
+      overflow-x: hidden;
+      background: linear-gradient(-45deg, #003f3f, #006666, #008080, #004c4c);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 80px 120px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 150px 60px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(2px 2px at 220px 200px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 300px 100px, rgba(255,255,255,0.8), transparent);
+      background-repeat: repeat;
+      background-size: 350px 350px;
+      animation: twinkle 12s linear infinite;
+      opacity: 0.6;
+      z-index: -1;
+    }
+
+    @keyframes twinkle {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-600px); }
+    }
+
+    .verse-box {
+      background: rgba(255, 215, 0, 0.08);
+      border: 2px solid gold;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.4);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .verse-title {
+      color: gold;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .verse-main {
+      color: #e6fdfd;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .mission-highlight {
+      background: rgba(255,255,255,0.12);
+      padding: 20px;
+      border-left: 6px solid gold;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .day-btn {
+      padding: 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .day-btn:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      display: block;
+      margin: 40px auto 0;
+      width: fit-content;
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: white;
+      color: #006666;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: gold;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="container">
+  <div class="grid">
+    <section>
+
+      <div class="verse-box">
+        <div class="verse-title">
+          🐜 Go to the ants, consider her ways and be wise:
+        </div>
+        <div class="verse-main">
+          "Which having no guide or overseer or ruler, provides her supplies in the summer and gathers her food in the harvest."
+        </div>
+      </div>
+
+      <div class="mission-highlight">
+        🎯 200 Days Target to Increase Your Vocabulary
+      </div>
+
+      <div class="days-grid" id="daysContainer"></div>
+
+      <a href="english.html" class="back-btn">⬅ Back to English Learning Page</a>
+
+    </section>
+  </div>
+</main>
+
+<script>
+  const container = document.getElementById("daysContainer");
+
+  for (let i = 1; i <= 200; i++) {
+    const button = document.createElement("button");
+    button.className = "day-btn";
+    button.innerText = "Day " + i;
+
+    button.onclick = function() {
+      if (i <= 12) {
+        window.location.href = "day-" + i + ".html";
+      } else {
+        this.style.background = "gold";
+        this.style.color = "black";
+        this.innerText = "✔ Day " + i;
+      }
+    };
+
+    container.appendChild(button);
+  }
+</script>
+
+</body>
+</html>
