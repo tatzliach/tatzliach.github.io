@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 12 - Daily Conversation Words</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<style>
+body { margin:0; font-family:'Segoe UI',sans-serif; background:linear-gradient(to bottom,#fff9dc,#fffacd); color:#222; text-align:center; overflow-x:hidden; position:relative;}
+.star {position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:0;animation:twinkle 3s infinite;}
+@keyframes twinkle {0%,100%{opacity:0;transform:scale(0.8);}50%{opacity:1;transform:scale(1.5);}}
+.stars-container {position:fixed;width:100%;height:100%;z-index:0;}
+header {margin-top:50px;margin-bottom:30px;position:relative;z-index:2;}
+header h1 {font-size:3rem;font-weight:bold;margin-bottom:10px;text-shadow:0 0 15px #f0e68c;color:#d35400;}
+.highlighted-text {font-size:2rem;font-weight:bold;color:#d35400;margin:20px auto;max-width:700px;padding:20px;border-radius:20px;background:rgba(255,250,200,0.8);box-shadow:0 0 25px rgba(0,0,0,0.1);text-align:center;animation:glow 2.5s infinite alternate;}
+@keyframes glow {0% { box-shadow:0 0 15px rgba(211,84,0,0.5);}100%{box-shadow:0 0 35px rgba(211,84,0,0.8);}}
+.description-box {font-size:1.15rem;margin:25px auto;max-width:850px;text-align:left;background:rgba(255,250,200,0.85);padding:25px;border-radius:20px;line-height:1.8;box-shadow:0 0 25px rgba(0,0,0,0.08);color:#222;}
+.vocab-list {margin:40px auto;max-width:850px;text-align:left;}
+.vocab-box {margin:15px 0;padding:20px;border-left:6px solid #ffd700;border-radius:15px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);box-shadow:0 0 20px rgba(0,0,0,0.05);transition:all 0.3s ease;color:#222;}
+.vocab-box:hover {transform:translateX(5px) scale(1.02);background:rgba(255,250,200,0.8);}
+.vocab-word {font-weight:bold;color:#c0392b;font-size:1.2rem;margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem;margin-bottom:5px;}
+.vocab-example {font-size:1rem;font-style:italic;}
+footer {margin-bottom:40px;font-size:1rem;opacity:0.85;color:#555;}
+</style>
+</head>
+<body>
+
+<div class="stars-container">
+<script>
+const container=document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+const star=document.createElement('div');
+star.classList.add('star');
+star.style.top=Math.random()*100+'%';
+star.style.left=Math.random()*100+'%';
+star.style.animationDelay=Math.random()*3+'s';
+container.appendChild(star);}
+</script>
+</div>
+
+<main class="container">
+<header><h1>Day 12 🌟</h1></header>
+
+<div class="highlighted-text">
+Daily Conversation Words 💬<br>
+<span style="font-size:1.5rem;color:#d35400;">Common Speaking Vocabulary 🌟</span>
+</div>
+
+<div class="description-box">
+এই ১০টি শব্দ দৈনন্দিন কথোপকথনের জন্য খুবই গুরুত্বপূর্ণ। প্রতিদিন ব্যবহার অনুশীলন করুন। 💡
+</div>
+
+<div class="vocab-list">
+<div class="vocab-box"><div class="vocab-word">Maybe</div><div class="vocab-meaning">হয়তো</div><div class="vocab-example">Maybe I will go tomorrow.</div></div>
+<div class="vocab-box"><div class="vocab-word">Really</div><div class="vocab-meaning">সত্যি</div><div class="vocab-example">Really? That’s great news!</div></div>
+<div class="vocab-box"><div class="vocab-word">Always</div><div class="vocab-meaning">সবসময়</div><div class="vocab-example">She always wakes up early.</div></div>
+<div class="vocab-box"><div class="vocab-word">Never</div><div class="vocab-meaning">কখনো না</div><div class="vocab-example">I never eat junk food.</div></div>
+<div class="vocab-box"><div class="vocab-word">Sometimes</div><div class="vocab-meaning">কখনো কখনো</div><div class="vocab-example">I sometimes watch TV.</div></div>
+<div class="vocab-box"><div class="vocab-word">Usually</div><div class="vocab-meaning">সাধারণত</div><div class="vocab-example">He usually comes late.</div></div>
+<div class="vocab-box"><div class="vocab-word">Together</div><div class="vocab-meaning">একসাথে</div><div class="vocab-example">We study together.</div></div>
+<div class="vocab-box"><div class="vocab-word">Alone</div><div class="vocab-meaning">একা</div><div class="vocab-example">She lives alone.</div></div>
+<div class="vocab-box"><div class="vocab-word">Again</div><div class="vocab-meaning">আবার</div><div class="vocab-example">Please say it again.</div></div>
+<div class="vocab-box"><div class="vocab-word">Soon</div><div class="vocab-meaning">শীঘ্রই</div><div class="vocab-example">I will call you soon.</div></div>
+</div>
+
+<footer>© 2026 Tatzliach Education ⭐</footer>
+</main>
+</body>
+</html>
