@@ -90,20 +90,24 @@ body::before {
 
 .verse-title { color: gold; font-size: 1.6rem; margin-bottom: 15px; }
 .verse-main { color: #fff; font-size: 1.2rem; font-style: italic; }
+
 .page-title { text-align: center; font-size: 2.2rem; margin-bottom: 30px; color: #fff; }
 
-.buttons-grid {
+.days-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 12px;
   margin-top: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .day-btn {
   padding: 18px;
   border-radius: 12px;
   font-weight: bold;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.2);
   border: 1px solid rgba(255,255,255,0.3);
   color: white;
   text-align: center;
@@ -153,15 +157,13 @@ body::before {
 
       <div class="page-title">📘 60 Days English Learning Plan</div>
 
-      <div class="buttons-grid">
-        <!-- Active links for Day 1 to Day 5 -->
+      <div class="days-grid">
+        <!-- Days 1–60 buttons -->
         <a href="day1.html" class="day-btn">Day 1</a>
         <a href="day2.html" class="day-btn">Day 2</a>
         <a href="day3.html" class="day-btn">Day 3</a>
         <a href="day4.html" class="day-btn">Day 4</a>
         <a href="day5.html" class="day-btn">Day 5</a>
-
-        <!-- Rest of the buttons (Day 6 to Day 60) not linked yet -->
         <a href="#" class="day-btn">Day 6</a>
         <a href="#" class="day-btn">Day 7</a>
         <a href="#" class="day-btn">Day 8</a>
@@ -220,6 +222,7 @@ body::before {
       </div>
 
       <a href="english.html" class="back-btn">⬅ Back to English Learning Page</a>
+
     </section>
   </div>
 </main>
