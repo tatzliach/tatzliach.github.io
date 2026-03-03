@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 42 - Travel Words 🌍</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<style>
+:root {
+  --accent: #d35400;
+  --gold: #ffd700;
+  --light-bg: #fff9dc;
+  --light-end: #fffacd;
+  --card: rgba(255,250,200,0.85);
+  --shadow: 0 0 25px rgba(0,0,0,0.08);
+}
+
+body {
+  margin:0;
+  font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
+  text-align:center;
+  position:relative;
+  overflow-x:hidden;
+}
+
+.star {
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:0;
+  animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%,100%{opacity:0;}
+  50%{opacity:1;}
+}
+
+.stars-container {
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+main { position:relative; z-index:2; }
+
+h1 {
+  font-size:3rem;
+  color:var(--accent);
+  margin-top:50px;
+}
+
+.highlighted-text {
+  font-size:2rem;
+  font-weight:bold;
+  margin:20px auto;
+  max-width:700px;
+  padding:20px;
+  border-radius:20px;
+  background:var(--card);
+  box-shadow:var(--shadow);
+}
+
+.verse {
+  font-style:italic;
+  margin:25px auto;
+  max-width:800px;
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+.description-box {
+  margin:25px auto;
+  max-width:850px;
+  background:var(--card);
+  padding:25px;
+  border-radius:20px;
+  text-align:left;
+}
+
+.vocab-list {
+  max-width:850px;
+  margin:30px auto;
+  text-align:left;
+}
+
+.vocab-box {
+  background:white;
+  padding:18px;
+  margin:12px 0;
+  border-left:6px solid var(--gold);
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.vocab-word { font-weight:bold; color:#c0392b; }
+.vocab-example { font-style:italic; }
+
+footer {
+  margin:40px 0;
+  color:#555;
+}
+</style>
+</head>
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+
+<h1>Day 42 🌟</h1>
+
+<div class="highlighted-text">
+Travel Words 🌍<br>
+<span style="font-size:1.4rem;">ভ্রমণ সংক্রান্ত শব্দ 🌟</span>
+</div>
+
+<div class="verse">
+“The Lord will watch over your coming and going both now and forevermore.”<br>
+<strong style="color:var(--accent);">Psalm 121:8 🙏</strong>
+</div>
+
+<div class="description-box">
+এই শব্দগুলো ভ্রমণ ও যাত্রার সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করুন এবং নিজের কথায় ব্যবহার করার চেষ্টা করুন। ✈️✨
+</div>
+
+<div class="vocab-list">
+
+<div class="vocab-box"><div class="vocab-word">Journey</div>ভ্রমণ<br><div class="vocab-example">The journey was long.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Trip</div>সফর<br><div class="vocab-example">We went on a trip.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Luggage</div>লাগেজ<br><div class="vocab-example">Carry your luggage.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Passport</div>পাসপোর্ট<br><div class="vocab-example">I need my passport.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Airport</div>বিমানবন্দর<br><div class="vocab-example">The airport is crowded.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Map</div>মানচিত্র<br><div class="vocab-example">Look at the map.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Guide</div>গাইড<br><div class="vocab-example">The guide showed us the city.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Tourist</div>পর্যটক<br><div class="vocab-example">The tourist took photos.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Hotel</div>হোটেল<br><div class="vocab-example">We stayed at a hotel.</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Reservation</div>সংরক্ষণ<br><div class="vocab-example">I made a reservation.</div></div>
+
+</div>
+
+<footer>
+© 2026 Tatzliach Education ✨
+</footer>
+
+</main>
+
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  container.appendChild(star);
+}
+</script>
+
+</body>
+</html>
