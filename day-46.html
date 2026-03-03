@@ -12,100 +12,63 @@
   --gold: #ffd700;
   --light-bg: #fff9dc;
   --light-end: #fffacd;
-  --card: rgba(255,250,200,0.85);
-  --shadow: 0 0 25px rgba(0,0,0,0.08);
+  --card: rgba(255,250,200,0.82);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
 }
 
 body {
-  margin:0;
-  font-family:'Segoe UI',system-ui,sans-serif;
+  margin:0; font-family:'Segoe UI',system-ui,sans-serif;
   background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
-  text-align:center;
-  position:relative;
-  overflow-x:hidden;
+  color:#222; text-align:center; overflow-x:hidden; position:relative;
 }
 
-.star {
-  position:absolute;
-  width:2px;
-  height:2px;
-  background:white;
-  border-radius:50%;
-  opacity:0;
-  animation:twinkle 3s infinite;
-}
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
 
-@keyframes twinkle {
-  0%,100%{opacity:0;}
-  50%{opacity:1;}
-}
-
-.stars-container {
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:0;
-}
-
-main { position:relative; z-index:2; }
-
-h1 {
-  font-size:3rem;
-  color:var(--accent);
-  margin-top:50px;
-}
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #f0e68c; color:var(--accent);}
 
 .highlighted-text {
-  font-size:2rem;
-  font-weight:bold;
-  margin:20px auto;
-  max-width:700px;
-  padding:20px;
-  border-radius:20px;
-  background:var(--card);
-  box-shadow:var(--shadow);
+  font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
+  padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
+  text-align:center; animation:glow 2.7s infinite alternate;
 }
+@keyframes glow {0%{box-shadow:0 0 15px rgba(211,84,0,0.45);} 100%{box-shadow:0 0 38px rgba(211,84,0,0.8);}}
 
 .verse {
-  font-style:italic;
-  margin:25px auto;
-  max-width:800px;
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:var(--shadow);
+  font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
 }
 
 .description-box {
-  margin:25px auto;
-  max-width:850px;
-  background:var(--card);
-  padding:25px;
-  border-radius:20px;
-  text-align:left;
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
 }
 
-.vocab-list {
-  max-width:850px;
-  margin:30px auto;
-  text-align:left;
-}
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
 
 .vocab-box {
-  background:white;
-  padding:18px;
-  margin:12px 0;
-  border-left:6px solid var(--gold);
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,250,200,0.84);
+  box-shadow:0 12px 32px rgba(211,84,0,0.22);
 }
 
-.vocab-word { font-weight:bold; color:#c0392b; }
-.vocab-example { font-style:italic; }
+.vocab-word {font-weight:bold; color:#c0392b; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
 
-footer {
-  margin:40px 0;
-  color:#555;
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
+
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
 }
 </style>
 </head>
@@ -114,51 +77,47 @@ footer {
 <div class="stars-container"></div>
 
 <main class="container">
-
-<h1>Day 46 🌟</h1>
+<header><h1>Day 46 🌟</h1></header>
 
 <div class="highlighted-text">
-Social Words 👥<br>
-<span style="font-size:1.4rem;">সামাজিক শব্দ 🌟</span>
+সামাজিক শব্দ 👥<br>
+<span style="font-size:1.5rem;color:var(--accent);">Social Words 🌟</span>
 </div>
 
 <div class="verse">
 “How good and pleasant it is when God’s people live together in unity!”<br>
-<strong style="color:var(--accent);">Psalm 133:1 🙏</strong>
+<span style="font-weight:bold; color:var(--accent);">Psalm 133:1 🙏</span>
 </div>
 
 <div class="description-box">
-এই শব্দগুলো সমাজ, মানুষ এবং সম্পর্কের সাথে সম্পর্কিত। আমরা একসাথে কাজ করলে এবং একে অপরকে সাহায্য করলে সমাজ সুন্দর হয়। 🤝✨
+এই ১০টি শব্দ সমাজ ও মানুষের সম্পর্কের সাথে সম্পর্কিত। একে অপরের সাথে ভালো ব্যবহার ও সহযোগিতা করা খুবই গুরুত্বপূর্ণ। 🤝✨
 </div>
 
 <div class="vocab-list">
 
-<div class="vocab-box"><div class="vocab-word">Neighbor</div>প্রতিবেশী<br><div class="vocab-example">My neighbor is friendly.</div></div>
+<div class="vocab-box"><div class="vocab-word">Neighbor</div><div class="vocab-meaning">প্রতিবেশী</div><div class="vocab-example">My neighbor is friendly. 🏠</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Guest</div>অতিথি<br><div class="vocab-example">We welcomed our guest.</div></div>
+<div class="vocab-box"><div class="vocab-word">Guest</div><div class="vocab-meaning">অতিথি</div><div class="vocab-example">We welcomed our guest. 🎉</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Host</div>আয়োজক<br><div class="vocab-example">He is the host of the party.</div></div>
+<div class="vocab-box"><div class="vocab-word">Host</div><div class="vocab-meaning">আয়োজক</div><div class="vocab-example">He is the host of the party. 🥳</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Crowd</div>ভিড়<br><div class="vocab-example">There was a big crowd.</div></div>
+<div class="vocab-box"><div class="vocab-word">Crowd</div><div class="vocab-meaning">ভিড়</div><div class="vocab-example">There was a big crowd. 👥</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Community</div>সম্প্রদায়<br><div class="vocab-example">Our community is helpful.</div></div>
+<div class="vocab-box"><div class="vocab-word">Community</div><div class="vocab-meaning">সম্প্রদায়</div><div class="vocab-example">Our community is helpful. 🌍</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Leader</div>নেতা<br><div class="vocab-example">He is a strong leader.</div></div>
+<div class="vocab-box"><div class="vocab-word">Leader</div><div class="vocab-meaning">নেতা</div><div class="vocab-example">He is a strong leader. 👑</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Member</div>সদস্য<br><div class="vocab-example">She is a club member.</div></div>
+<div class="vocab-box"><div class="vocab-word">Member</div><div class="vocab-meaning">সদস্য</div><div class="vocab-example">She is a club member. 📋</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Team</div>দল<br><div class="vocab-example">We are a good team.</div></div>
+<div class="vocab-box"><div class="vocab-word">Team</div><div class="vocab-meaning">দল</div><div class="vocab-example">We are a good team. ⚽</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Partner</div>সঙ্গী<br><div class="vocab-example">She is my business partner.</div></div>
+<div class="vocab-box"><div class="vocab-word">Partner</div><div class="vocab-meaning">সঙ্গী</div><div class="vocab-example">She is my business partner. 🤝</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Volunteer</div>স্বেচ্ছাসেবক<br><div class="vocab-example">He works as a volunteer.</div></div>
+<div class="vocab-box"><div class="vocab-word">Volunteer</div><div class="vocab-meaning">স্বেচ্ছাসেবক</div><div class="vocab-example">He works as a volunteer. ❤️</div></div>
 
 </div>
 
-<footer>
-© 2026 Tatzliach Education ⭐
-</footer>
-
+<footer>© 2026 Tatzliach Education ⭐</footer>
 </main>
 
 <script>
@@ -168,6 +127,7 @@ for(let i=0;i<50;i++){
   star.classList.add('star');
   star.style.top=Math.random()*100+'%';
   star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
   container.appendChild(star);
 }
 </script>
