@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 50 - Academic Words 📖</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,#fff9dc,#fffacd);
+  text-align:center;
+  position:relative;
+  overflow-x:hidden;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:0;
+  animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:0;}
+  50%{opacity:1;}
+}
+
+.stars-container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+main{position:relative;z-index:2;}
+
+h1{
+  font-size:3rem;
+  color:#d35400;
+  margin-top:50px;
+}
+
+.highlight{
+  font-size:2rem;
+  font-weight:bold;
+  margin:20px auto;
+  max-width:700px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,250,200,0.85);
+}
+
+.verse{
+  font-style:italic;
+  margin:25px auto;
+  max-width:800px;
+  background:white;
+  padding:25px;
+  border-radius:20px;
+}
+
+.description{
+  max-width:850px;
+  margin:20px auto;
+  background:rgba(255,250,200,0.85);
+  padding:20px;
+  border-radius:20px;
+  text-align:left;
+}
+
+.vocab-box{
+  background:white;
+  padding:15px;
+  margin:10px auto;
+  max-width:850px;
+  text-align:left;
+  border-left:6px solid gold;
+  border-radius:10px;
+}
+
+.vocab-word{
+  font-weight:bold;
+  color:#c0392b;
+}
+
+footer{
+  margin:40px 0;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+
+<h1>Day 50 🌟</h1>
+
+<div class="highlight">
+Academic Words 📖<br>
+<span style="font-size:1.3rem;">শিক্ষা সম্পর্কিত শব্দ 🌟</span>
+</div>
+
+<div class="verse">
+“Let the wise listen and add to their learning, and let the discerning get guidance.”<br>
+<strong>Proverbs 1:5 🙏</strong>
+</div>
+
+<div class="description">
+এই শব্দগুলো পড়াশোনা ও শিক্ষার সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করলে আপনার জ্ঞান ও শব্দভাণ্ডার বৃদ্ধি পাবে। 📚✨
+</div>
+
+<div class="vocab-box"><span class="vocab-word">Subject</span> – বিষয়<br><i>English is my favorite subject.</i></div>
+<div class="vocab-box"><span class="vocab-word">Topic</span> – বিষয়<br><i>Today’s topic is grammar.</i></div>
+<div class="vocab-box"><span class="vocab-word">Chapter</span> – অধ্যায়<br><i>Read the next chapter.</i></div>
+<div class="vocab-box"><span class="vocab-word">Paragraph</span> – অনুচ্ছেদ<br><i>Write one paragraph.</i></div>
+<div class="vocab-box"><span class="vocab-word">Sentence</span> – বাক্য<br><i>Make a sentence.</i></div>
+<div class="vocab-box"><span class="vocab-word">Grammar</span> – ব্যাকরণ<br><i>Grammar is important.</i></div>
+<div class="vocab-box"><span class="vocab-word">Vocabulary</span> – শব্দভাণ্ডার<br><i>Improve your vocabulary.</i></div>
+<div class="vocab-box"><span class="vocab-word">Meaning</span> – অর্থ<br><i>What is the meaning?</i></div>
+<div class="vocab-box"><span class="vocab-word">Definition</span> – সংজ্ঞা<br><i>Learn the definition.</i></div>
+<div class="vocab-box"><span class="vocab-word">Example</span> – উদাহরণ<br><i>Give an example.</i></div>
+
+<footer>
+🎉 Congratulations on Completing 50 Days! 🎉<br>
+© 2026 Tatzliach Education ⭐
+</footer>
+
+</main>
+
+<script>
+const container=document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+let star=document.createElement('div');
+star.classList.add('star');
+star.style.top=Math.random()*100+'%';
+star.style.left=Math.random()*100+'%';
+container.appendChild(star);
+}
+</script>
+
+</body>
+</html>
