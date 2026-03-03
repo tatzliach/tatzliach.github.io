@@ -12,100 +12,63 @@
   --gold: #ffd700;
   --light-bg: #fff9dc;
   --light-end: #fffacd;
-  --card: rgba(255,250,200,0.85);
-  --shadow: 0 0 25px rgba(0,0,0,0.08);
+  --card: rgba(255,250,200,0.82);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
 }
 
 body {
-  margin:0;
-  font-family:'Segoe UI',system-ui,sans-serif;
+  margin:0; font-family:'Segoe UI',system-ui,sans-serif;
   background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
-  text-align:center;
-  position:relative;
-  overflow-x:hidden;
+  color:#222; text-align:center; overflow-x:hidden; position:relative;
 }
 
-.star {
-  position:absolute;
-  width:2px;
-  height:2px;
-  background:white;
-  border-radius:50%;
-  opacity:0;
-  animation:twinkle 3s infinite;
-}
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
 
-@keyframes twinkle {
-  0%,100%{opacity:0;}
-  50%{opacity:1;}
-}
-
-.stars-container {
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:0;
-}
-
-main { position:relative; z-index:2; }
-
-h1 {
-  font-size:3rem;
-  color:var(--accent);
-  margin-top:50px;
-}
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #f0e68c; color:var(--accent);}
 
 .highlighted-text {
-  font-size:2rem;
-  font-weight:bold;
-  margin:20px auto;
-  max-width:700px;
-  padding:20px;
-  border-radius:20px;
-  background:var(--card);
-  box-shadow:var(--shadow);
+  font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
+  padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
+  text-align:center; animation:glow 2.7s infinite alternate;
 }
+@keyframes glow {0%{box-shadow:0 0 15px rgba(211,84,0,0.45);} 100%{box-shadow:0 0 38px rgba(211,84,0,0.8);}}
 
 .verse {
-  font-style:italic;
-  margin:25px auto;
-  max-width:800px;
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:var(--shadow);
+  font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
 }
 
 .description-box {
-  margin:25px auto;
-  max-width:850px;
-  background:var(--card);
-  padding:25px;
-  border-radius:20px;
-  text-align:left;
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
 }
 
-.vocab-list {
-  max-width:850px;
-  margin:30px auto;
-  text-align:left;
-}
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
 
 .vocab-box {
-  background:white;
-  padding:18px;
-  margin:12px 0;
-  border-left:6px solid var(--gold);
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,250,200,0.84);
+  box-shadow:0 12px 32px rgba(211,84,0,0.22);
 }
 
-.vocab-word { font-weight:bold; color:#c0392b; }
-.vocab-example { font-style:italic; }
+.vocab-word {font-weight:bold; color:#c0392b; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
 
-footer {
-  margin:40px 0;
-  color:#555;
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
+
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
 }
 </style>
 </head>
@@ -114,51 +77,47 @@ footer {
 <div class="stars-container"></div>
 
 <main class="container">
-
-<h1>Day 43 🌟</h1>
+<header><h1>Day 43 🌟</h1></header>
 
 <div class="highlighted-text">
-Communication Verbs 📞<br>
-<span style="font-size:1.4rem;">যোগাযোগমূলক ক্রিয়া 🌟</span>
+যোগাযোগমূলক ক্রিয়া 📞<br>
+<span style="font-size:1.5rem;color:var(--accent);">Communication Verbs 🌟</span>
 </div>
 
 <div class="verse">
-“Therefore encourage one another and build each other up.”<br>
-<strong style="color:var(--accent);">1 Thessalonians 5:11 🙏</strong>
+“Let your conversation be always full of grace.”<br>
+<span style="font-weight:bold; color:var(--accent);">Colossians 4:6 🙏</span>
 </div>
 
 <div class="description-box">
-এই শব্দগুলো যোগাযোগ ও কথা বলার ক্রিয়ার সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করুন এবং নিজের কথায় ব্যবহার করার চেষ্টা করুন। 📞✨
+এই ১০টি শব্দ যোগাযোগ ও কথোপকথনের সাথে সম্পর্কিত। সুন্দরভাবে কথা বলা এবং সঠিকভাবে উত্তর দেওয়া শেখা খুব গুরুত্বপূর্ণ। 🗣️✨
 </div>
 
 <div class="vocab-list">
 
-<div class="vocab-box"><div class="vocab-word">Call</div>ফোন করা<br><div class="vocab-example">I will call you.</div></div>
+<div class="vocab-box"><div class="vocab-word">Call</div><div class="vocab-meaning">ফোন করা</div><div class="vocab-example">I will call you. 📞</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Text</div>বার্তা পাঠানো<br><div class="vocab-example">She texts her friend.</div></div>
+<div class="vocab-box"><div class="vocab-word">Text</div><div class="vocab-meaning">বার্তা পাঠানো</div><div class="vocab-example">She texts her friend. 💬</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Reply</div>উত্তর দেওয়া<br><div class="vocab-example">Please reply soon.</div></div>
+<div class="vocab-box"><div class="vocab-word">Reply</div><div class="vocab-meaning">উত্তর দেওয়া</div><div class="vocab-example">Please reply soon. 📩</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Invite</div>আমন্ত্রণ করা<br><div class="vocab-example">I invite you to my party.</div></div>
+<div class="vocab-box"><div class="vocab-word">Invite</div><div class="vocab-meaning">আমন্ত্রণ করা</div><div class="vocab-example">I invite you to my party. 🎉</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Agree</div>সম্মত হওয়া<br><div class="vocab-example">I agree with you.</div></div>
+<div class="vocab-box"><div class="vocab-word">Agree</div><div class="vocab-meaning">সম্মত হওয়া</div><div class="vocab-example">I agree with you. 👍</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Refuse</div>অস্বীকার করা<br><div class="vocab-example">He refused the offer.</div></div>
+<div class="vocab-box"><div class="vocab-word">Refuse</div><div class="vocab-meaning">অস্বীকার করা</div><div class="vocab-example">He refused the offer. ❌</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Promise</div>প্রতিশ্রুতি দেওয়া<br><div class="vocab-example">I promise to help you.</div></div>
+<div class="vocab-box"><div class="vocab-word">Promise</div><div class="vocab-meaning">প্রতিশ্রুতি দেওয়া</div><div class="vocab-example">I promise to help you. 🤝</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Suggest</div>প্রস্তাব করা<br><div class="vocab-example">She suggests a new idea.</div></div>
+<div class="vocab-box"><div class="vocab-word">Suggest</div><div class="vocab-meaning">প্রস্তাব করা</div><div class="vocab-example">She suggests a new idea. 💡</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Inform</div>জানানো<br><div class="vocab-example">Please inform me.</div></div>
+<div class="vocab-box"><div class="vocab-word">Inform</div><div class="vocab-meaning">জানানো</div><div class="vocab-example">Please inform me. 📢</div></div>
 
-<div class="vocab-box"><div class="vocab-word">Announce</div>ঘোষণা করা<br><div class="vocab-example">They announced the result.</div></div>
+<div class="vocab-box"><div class="vocab-word">Announce</div><div class="vocab-meaning">ঘোষণা করা</div><div class="vocab-example">They announced the result. 📣</div></div>
 
 </div>
 
-<footer>
-© 2026 Tatzliach Education ⭐
-</footer>
-
+<footer>© 2026 Tatzliach Education ⭐</footer>
 </main>
 
 <script>
@@ -168,6 +127,7 @@ for(let i=0;i<50;i++){
   star.classList.add('star');
   star.style.top=Math.random()*100+'%';
   star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
   container.appendChild(star);
 }
 </script>
