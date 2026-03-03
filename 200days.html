@@ -32,6 +32,21 @@ body {
   color: #fff;
 }
 
+/* Floating Verse Animation */
+@keyframes floatVerse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Lightning Star Animation */
+@keyframes starLightning {
+  0%   { opacity: 0.2; transform: translateX(0) rotate(0deg); }
+  25%  { opacity: 0.7; transform: translateX(2px) rotate(10deg); }
+  50%  { opacity: 0.4; transform: translateX(-2px) rotate(-10deg); }
+  75%  { opacity: 0.7; transform: translateX(1px) rotate(5deg); }
+  100% { opacity: 0.2; transform: translateX(0) rotate(0deg); }
+}
+
 .verse-box {
   background: rgba(255,255,255,0.08);
   border: 2px solid gold;
@@ -40,7 +55,25 @@ body {
   box-shadow: 0 0 25px rgba(255,215,0,0.5);
   margin-bottom: 40px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: floatVerse 6s ease-in-out infinite;
 }
+
+.verse-box::before,
+.verse-box::after {
+  content: "✦ ✧ ✦ ✧ ✦ ✧";
+  position: absolute;
+  font-size: 1.2rem;
+  color: gold;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  animation: starLightning 3s infinite alternate;
+}
+
+.verse-box::before { top: -15px; }
+.verse-box::after { bottom: -15px; }
 
 .verse-title { color: gold; font-size: 1.6rem; margin-bottom: 15px; }
 .verse-main { color: #fff; font-size: 1.2rem; font-style: italic; }
