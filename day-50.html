@@ -7,143 +7,128 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
 <style>
-body{
-  margin:0;
-  font-family:'Segoe UI',system-ui,sans-serif;
-  background:linear-gradient(to bottom,#fff9dc,#fffacd);
-  text-align:center;
-  position:relative;
-  overflow-x:hidden;
+:root {
+  --accent: #d35400;
+  --gold: #ffd700;
+  --light-bg: #fff9dc;
+  --light-end: #fffacd;
+  --card: rgba(255,250,200,0.82);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
 }
 
-.star{
-  position:absolute;
-  width:2px;
-  height:2px;
-  background:white;
-  border-radius:50%;
-  opacity:0;
-  animation:twinkle 3s infinite;
+body {
+  margin:0; font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
+  color:#222; text-align:center; overflow-x:hidden; position:relative;
 }
 
-@keyframes twinkle{
-  0%,100%{opacity:0;}
-  50%{opacity:1;}
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
+
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #f0e68c; color:var(--accent);}
+
+.highlighted-text {
+  font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
+  padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
+  text-align:center; animation:glow 2.7s infinite alternate;
+}
+@keyframes glow {0%{box-shadow:0 0 15px rgba(211,84,0,0.45);} 100%{box-shadow:0 0 38px rgba(211,84,0,0.8);}}
+
+.verse {
+  font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
 }
 
-.stars-container{
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:0;
+.description-box {
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
 }
 
-main{position:relative;z-index:2;}
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
 
-h1{
-  font-size:3rem;
-  color:#d35400;
-  margin-top:50px;
+.vocab-box {
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,250,200,0.84);
+  box-shadow:0 12px 32px rgba(211,84,0,0.22);
 }
 
-.highlight{
-  font-size:2rem;
-  font-weight:bold;
-  margin:20px auto;
-  max-width:700px;
-  padding:20px;
-  border-radius:20px;
-  background:rgba(255,250,200,0.85);
-}
+.vocab-word {font-weight:bold; color:#c0392b; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
 
-.verse{
-  font-style:italic;
-  margin:25px auto;
-  max-width:800px;
-  background:white;
-  padding:25px;
-  border-radius:20px;
-}
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
 
-.description{
-  max-width:850px;
-  margin:20px auto;
-  background:rgba(255,250,200,0.85);
-  padding:20px;
-  border-radius:20px;
-  text-align:left;
-}
-
-.vocab-box{
-  background:white;
-  padding:15px;
-  margin:10px auto;
-  max-width:850px;
-  text-align:left;
-  border-left:6px solid gold;
-  border-radius:10px;
-}
-
-.vocab-word{
-  font-weight:bold;
-  color:#c0392b;
-}
-
-footer{
-  margin:40px 0;
-  color:#555;
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
 }
 </style>
 </head>
-
 <body>
 
 <div class="stars-container"></div>
 
 <main class="container">
+<header><h1>Day 50 🌟</h1></header>
 
-<h1>Day 50 🌟</h1>
-
-<div class="highlight">
-Academic Words 📖<br>
-<span style="font-size:1.3rem;">শিক্ষা সম্পর্কিত শব্দ 🌟</span>
+<div class="highlighted-text">
+শিক্ষা সম্পর্কিত শব্দ 📖<br>
+<span style="font-size:1.5rem;color:var(--accent);">Academic Words 🌟</span>
 </div>
 
 <div class="verse">
-“Let the wise listen and add to their learning, and let the discerning get guidance.”<br>
-<strong>Proverbs 1:5 🙏</strong>
+“Let the wise listen and add to their learning.”<br>
+<span style="font-weight:bold; color:var(--accent);">Proverbs 1:5 🙏</span>
 </div>
 
-<div class="description">
-এই শব্দগুলো পড়াশোনা ও শিক্ষার সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করলে আপনার জ্ঞান ও শব্দভাণ্ডার বৃদ্ধি পাবে। 📚✨
+<div class="description-box">
+এই ১০টি শব্দ পড়াশোনা ও শিক্ষার সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করলে আপনার শব্দভাণ্ডার আরও সমৃদ্ধ হবে। 📚✨
 </div>
 
-<div class="vocab-box"><span class="vocab-word">Subject</span> – বিষয়<br><i>English is my favorite subject.</i></div>
-<div class="vocab-box"><span class="vocab-word">Topic</span> – বিষয়<br><i>Today’s topic is grammar.</i></div>
-<div class="vocab-box"><span class="vocab-word">Chapter</span> – অধ্যায়<br><i>Read the next chapter.</i></div>
-<div class="vocab-box"><span class="vocab-word">Paragraph</span> – অনুচ্ছেদ<br><i>Write one paragraph.</i></div>
-<div class="vocab-box"><span class="vocab-word">Sentence</span> – বাক্য<br><i>Make a sentence.</i></div>
-<div class="vocab-box"><span class="vocab-word">Grammar</span> – ব্যাকরণ<br><i>Grammar is important.</i></div>
-<div class="vocab-box"><span class="vocab-word">Vocabulary</span> – শব্দভাণ্ডার<br><i>Improve your vocabulary.</i></div>
-<div class="vocab-box"><span class="vocab-word">Meaning</span> – অর্থ<br><i>What is the meaning?</i></div>
-<div class="vocab-box"><span class="vocab-word">Definition</span> – সংজ্ঞা<br><i>Learn the definition.</i></div>
-<div class="vocab-box"><span class="vocab-word">Example</span> – উদাহরণ<br><i>Give an example.</i></div>
+<div class="vocab-list">
 
-<footer>
-🎉 Congratulations on Completing 50 Days! 🎉<br>
-© 2026 Tatzliach Education ⭐
-</footer>
+<div class="vocab-box"><div class="vocab-word">Subject</div><div class="vocab-meaning">বিষয়</div><div class="vocab-example">English is my favorite subject. 📘</div></div>
 
+<div class="vocab-box"><div class="vocab-word">Topic</div><div class="vocab-meaning">বিষয়</div><div class="vocab-example">Today’s topic is grammar. 📝</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Chapter</div><div class="vocab-meaning">অধ্যায়</div><div class="vocab-example">Read the next chapter. 📖</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Paragraph</div><div class="vocab-meaning">অনুচ্ছেদ</div><div class="vocab-example">Write one paragraph. ✍️</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Sentence</div><div class="vocab-meaning">বাক্য</div><div class="vocab-example">Make a sentence. 📄</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Grammar</div><div class="vocab-meaning">ব্যাকরণ</div><div class="vocab-example">Grammar is important. 📚</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Vocabulary</div><div class="vocab-meaning">শব্দভাণ্ডার</div><div class="vocab-example">Improve your vocabulary. 🗂️</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Meaning</div><div class="vocab-meaning">অর্থ</div><div class="vocab-example">What is the meaning? ❓</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Definition</div><div class="vocab-meaning">সংজ্ঞা</div><div class="vocab-example">Learn the definition. 📘</div></div>
+
+<div class="vocab-box"><div class="vocab-word">Example</div><div class="vocab-meaning">উদাহরণ</div><div class="vocab-example">Give an example. 💡</div></div>
+
+</div>
+
+<footer>© 2026 Tatzliach Education ⭐</footer>
 </main>
 
 <script>
-const container=document.querySelector('.stars-container');
+const container = document.querySelector('.stars-container');
 for(let i=0;i<50;i++){
-let star=document.createElement('div');
-star.classList.add('star');
-star.style.top=Math.random()*100+'%';
-star.style.left=Math.random()*100+'%';
-container.appendChild(star);
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
+  container.appendChild(star);
 }
 </script>
 
