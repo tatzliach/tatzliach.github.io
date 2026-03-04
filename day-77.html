@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 77 - Positive Traits 🌟</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<style>
+:root {
+  --accent: #27ae60;
+  --gold: #ffd700;
+  --light-bg: #dff6dd;
+  --light-end: #b7e4c7;
+  --card: rgba(255,255,255,0.85);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
+}
+
+body {
+  margin:0; font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
+  color:#222; text-align:center; overflow-x:hidden; position:relative;
+}
+
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
+
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #2ecc71; color:var(--accent);}
+
+.highlighted-text {
+  font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
+  padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
+  text-align:center; animation:glow 2.7s infinite alternate;
+}
+@keyframes glow {0%{box-shadow:0 0 15px rgba(39,174,96,0.45);} 100%{box-shadow:0 0 38px rgba(39,174,96,0.8);}}
+
+.verse {
+  font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
+}
+
+.description-box {
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
+}
+
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
+
+.vocab-box {
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,255,255,0.84);
+  box-shadow:0 12px 32px rgba(39,174,96,0.22);
+}
+
+.vocab-word {font-weight:bold; color:#27ae60; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
+
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
+
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
+}
+</style>
+</head>
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+<header><h1>Day 77 🌟</h1></header>
+
+<div class="highlighted-text">Positive Traits 🌟<br><span style="font-size:1.5rem;color:var(--accent);">সकारাত্মক বৈশিষ্ট্য</span></div>
+
+<div class="verse">
+“Do everything with love and excellence.”<br>
+<span style="font-weight:bold; color:var(--accent);">Colossians 3:23 🙏</span>
+</div>
+
+<div class="description-box">
+এই ১০টি শব্দ মানুষের ইতিবাচক ব্যক্তিত্ব এবং আচরণের সাথে সম্পর্কিত। প্রতিদিন ব্যবহার করুন এবং নিজের চরিত্র গঠন করুন। 🌟✨
+</div>
+
+<div class="vocab-list">
+<div class="vocab-box"><div class="vocab-word">Honest</div><div class="vocab-meaning">সৎ</div><div class="vocab-example">He is honest. ✅</div></div>
+<div class="vocab-box"><div class="vocab-word">Loyal</div><div class="vocab-meaning">বিশ্বস্ত</div><div class="vocab-example">She is loyal to her friend. 💖</div></div>
+<div class="vocab-box"><div class="vocab-word">Brave</div><div class="vocab-meaning">সাহসী</div><div class="vocab-example">The soldier is brave. 🪖</div></div>
+<div class="vocab-box"><div class="vocab-word">Helpful</div><div class="vocab-meaning">সহায়ক</div><div class="vocab-example">She is always helpful. 🤝</div></div>
+<div class="vocab-box"><div class="vocab-word">Friendly</div><div class="vocab-meaning">বন্ধুত্বপূর্ণ</div><div class="vocab-example">The staff are friendly. 😀</div></div>
+<div class="vocab-box"><div class="vocab-word">Calm</div><div class="vocab-meaning">শান্ত</div><div class="vocab-example">He stayed calm. 🧘</div></div>
+<div class="vocab-box"><div class="vocab-word">Smart</div><div class="vocab-meaning">বুদ্ধিমান</div><div class="vocab-example">She is very smart. 🧠</div></div>
+<div class="vocab-box"><div class="vocab-word">Energetic</div><div class="vocab-meaning">উদ্যমী</div><div class="vocab-example">The child is energetic. ⚡</div></div>
+<div class="vocab-box"><div class="vocab-word">Wise</div><div class="vocab-meaning">জ্ঞানী</div><div class="vocab-example">The old man is wise. 🌿</div></div>
+<div class="vocab-box"><div class="vocab-word">Creative</div><div class="vocab-meaning">সৃজনশীল</div><div class="vocab-example">He is creative. 🎨</div></div>
+</div>
+
+<footer>© 2026 Tatzliach Education ⭐</footer>
+</main>
+
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
+  container.appendChild(star);
+}
+</script>
+
+</body>
+</html>
