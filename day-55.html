@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 55 - Transportation 🚗</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<style>
+:root {
+  --accent: #d35400;
+  --gold: #ffd700;
+  --light-bg: #fff9dc;
+  --light-end: #fffacd;
+  --card: rgba(255,250,200,0.82);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
+}
+
+body {
+  margin:0; font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
+  color:#222; text-align:center; overflow-x:hidden; position:relative;
+}
+
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
+
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #f0e68c; color:var(--accent);}
+
+.highlighted-text {
+  font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
+  padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
+  text-align:center; animation:glow 2.7s infinite alternate;
+}
+@keyframes glow {0%{box-shadow:0 0 15px rgba(211,84,0,0.45);} 100%{box-shadow:0 0 38px rgba(211,84,0,0.8);}}
+
+.verse {
+  font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
+}
+
+.description-box {
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
+}
+
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
+
+.vocab-box {
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,250,200,0.84);
+  box-shadow:0 12px 32px rgba(211,84,0,0.22);
+}
+
+.vocab-word {font-weight:bold; color:#c0392b; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
+
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
+
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
+}
+</style>
+</head>
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+<header><h1>Day 55 🌟</h1></header>
+
+<div class="highlighted-text">
+পরিবহন 🚗<br>
+<span style="font-size:1.5rem;color:var(--accent);">Transportation 🌟</span>
+</div>
+
+<div class="verse">
+“The LORD will watch over your coming and going both now and forevermore.”<br>
+<span style="font-weight:bold; color:var(--accent);">Psalm 121:8 🙏</span>
+</div>
+
+<div class="description-box">
+এই ১০টি পরিবহনের নাম শিখুন এবং ভ্রমণের সময় ব্যবহার করুন। 🚦✨
+</div>
+
+<div class="vocab-list">
+<div class="vocab-box"><div class="vocab-word">Tram</div><div class="vocab-meaning">ট্রাম</div><div class="vocab-example">Trams run in some cities. 🚋</div></div>
+<div class="vocab-box"><div class="vocab-word">Gondola</div><div class="vocab-meaning">গন্ডোলা</div><div class="vocab-example">We rode a gondola in Venice. 🚣</div></div>
+<div class="vocab-box"><div class="vocab-word">Monorail</div><div class="vocab-meaning">মনোরেল</div><div class="vocab-example">The monorail is above the street. 🚝</div></div>
+<div class="vocab-box"><div class="vocab-word">Cable car</div><div class="vocab-meaning">কেবল কার</div><div class="vocab-example">Take a cable car to the hilltop. 🚡</div></div>
+<div class="vocab-box"><div class="vocab-word">Sailboat</div><div class="vocab-meaning">পালতোলা নৌকা</div><div class="vocab-example">The sailboat glides on the water. ⛵</div></div>
+<div class="vocab-box"><div class="vocab-word">Canoe</div><div class="vocab-meaning">নৌকা</div><div class="vocab-example">Paddle the canoe carefully. 🛶</div></div>
+<div class="vocab-box"><div class="vocab-word">Hovercraft</div><div class="vocab-meaning">হোভারক্রাফ্ট</div><div class="vocab-example">The hovercraft moves on water. 🚤</div></div>
+<div class="vocab-box"><div class="vocab-word">Pedicab</div><div class="vocab-meaning">পেডিক্যাব</div><div class="vocab-example">Pedicabs are small human-powered taxis. 🚲</div></div>
+<div class="vocab-box"><div class="vocab-word">Ferry</div><div class="vocab-meaning">ফেরি</div><div class="vocab-example">Cross the river by ferry. ⛴️</div></div>
+<div class="vocab-box"><div class="vocab-word">Rickshaw</div><div class="vocab-meaning">রিকশা</div><div class="vocab-example">Take a rickshaw to the market. 🚲</div></div>
+</div>
+
+<footer>© 2026 Tatzliach Education ⭐</footer>
+</main>
+
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
+  container.appendChild(star);
+}
+</script>
+
+</body>
+</html>
