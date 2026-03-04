@@ -8,11 +8,11 @@
 
 <style>
 :root {
-  --accent: #d35400;
+  --accent: #27ae60;
   --gold: #ffd700;
-  --light-bg: #fff9dc;
-  --light-end: #fffacd;
-  --card: rgba(255,250,200,0.82);
+  --light-bg: #e8f5e9;
+  --light-end: #d0f0c0;
+  --card: rgba(255,255,255,0.85);
   --shadow: 0 0 25px rgba(0,0,0,0.09);
 }
 
@@ -27,16 +27,96 @@ body {
 .stars-container {position:fixed; width:100%; height:100%; z-index:0;}
 
 header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
-h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #f0e68c; color:var(--accent);}
+h1 {font-size:3rem; font-weight:bold; margin-bottom:10px; text-shadow:0 0 15px #a0d468; color:var(--accent);}
 
 .highlighted-text {
   font-size:2rem; font-weight:bold; color:var(--accent); margin:20px auto; max-width:700px;
   padding:20px; border-radius:20px; background:var(--card); box-shadow:var(--shadow);
   text-align:center; animation:glow 2.7s infinite alternate;
 }
-@keyframes glow {0%{box-shadow:0 0 15px rgba(211,84,0,0.45);} 100%{box-shadow:0 0 38px rgba(211,84,0,0.8);}}
+@keyframes glow {0%{box-shadow:0 0 15px rgba(39,174,96,0.45);} 100%{box-shadow:0 0 38px rgba(39,174,96,0.8);}}
 
 .verse {
   font-size:1.4rem; font-style:italic; margin:25px auto; max-width:800px;
   background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); padding:25px;
-  border-radius:20px; box-shadow:
+  border-radius:20px; box-shadow:0 0 30px rgba(0,0,0,0.07); color:#222;
+}
+
+.description-box {
+  font-size:1.15rem; margin:25px auto; max-width:850px; text-align:left;
+  background:var(--card); padding:25px; border-radius:20px; line-height:1.8;
+  box-shadow:var(--shadow); color:#222;
+}
+
+.vocab-list {margin:40px auto; max-width:850px; text-align:left;}
+
+.vocab-box {
+  margin:15px 0; padding:20px; border-left:6px solid var(--gold); border-radius:15px;
+  background:rgba(255,255,255,0.62); backdrop-filter:blur(10px); box-shadow:0 4px 18px rgba(0,0,0,0.06);
+  transition: all 0.28s ease; cursor:pointer;
+}
+.vocab-box:hover {
+  transform: translateY(-4px) scale(1.015); background:rgba(255,255,255,0.84);
+  box-shadow:0 12px 32px rgba(39,174,96,0.22);
+}
+
+.vocab-word {font-weight:bold; color:#27ae60; font-size:1.2rem; margin-bottom:5px;}
+.vocab-meaning {font-size:1.1rem; margin-bottom:5px;}
+.vocab-example {font-size:1rem; font-style:italic;}
+
+footer {margin-bottom:40px; font-size:1rem; opacity:0.85; color:#555; text-shadow:0 0 5px #fffacd;}
+
+@media (max-width:600px) {
+  .highlighted-text {font-size:1.6rem; padding:15px;}
+  .verse, .description-box, .vocab-box {padding:15px;}
+}
+</style>
+</head>
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+<header><h1>Day 72 🌳</h1></header>
+
+<div class="highlighted-text">Forest & Wildlife 🌳<br><span style="font-size:1.5rem;color:var(--accent);">জঙ্গল ও বন্যপ্রাণী</span></div>
+
+<div class="verse">
+“The earth is the Lord’s, and everything in it.”<br>
+<span style="font-weight:bold; color:var(--accent);">Psalm 24:1 🙏</span>
+</div>
+
+<div class="description-box">
+এই ১০টি শব্দ বন, প্রাণী ও প্রাকৃতিক পরিবেশের সাথে সম্পর্কিত। প্রতিদিন অনুশীলন করুন এবং প্রকৃতির সাথে সংযোগ বোধ করুন। 🌿✨
+</div>
+
+<div class="vocab-list">
+<div class="vocab-box"><div class="vocab-word">Jungle</div><div class="vocab-meaning">জঙ্গল</div><div class="vocab-example">The jungle is dense. 🌲</div></div>
+<div class="vocab-box"><div class="vocab-word">Hunter</div><div class="vocab-meaning">শিকারি</div><div class="vocab-example">The hunter moved quietly. 🎯</div></div>
+<div class="vocab-box"><div class="vocab-word">Prey</div><div class="vocab-meaning">শিকার</div><div class="vocab-example">The lion chased its prey. 🦁</div></div>
+<div class="vocab-box"><div class="vocab-word">Predator</div><div class="vocab-meaning">শিকারি প্রাণী</div><div class="vocab-example">A predator hunts other animals. 🐅</div></div>
+<div class="vocab-box"><div class="vocab-word">Nest</div><div class="vocab-meaning">বাসা</div><div class="vocab-example">The bird built a nest. 🐦</div></div>
+<div class="vocab-box"><div class="vocab-word">Feather</div><div class="vocab-meaning">পালক</div><div class="vocab-example">The feather is soft. 🪶</div></div>
+<div class="vocab-box"><div class="vocab-word">Fur</div><div class="vocab-meaning">লোম</div><div class="vocab-example">The rabbit has soft fur. 🐇</div></div>
+<div class="vocab-box"><div class="vocab-word">Claw</div><div class="vocab-meaning">নখর</div><div class="vocab-example">The tiger has sharp claws. 🐯</div></div>
+<div class="vocab-box"><div class="vocab-word">Den</div><div class="vocab-meaning">গর্ত/আশ্রয়</div><div class="vocab-example">The fox hid in its den. 🦊</div></div>
+<div class="vocab-box"><div class="vocab-word">Roar</div><div class="vocab-meaning">গর্জন</div><div class="vocab-example">We heard the lion’s roar. 🦁</div></div>
+</div>
+
+<footer>© 2026 Tatzliach Education ⭐</footer>
+</main>
+
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
+  container.appendChild(star);
+}
+</script>
+
+</body>
+  </html>
