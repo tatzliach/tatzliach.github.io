@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squares & Cubes Mastery</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #2c1a47;
+  background: linear-gradient(-45deg, #ff7f50, #ff6f61, #ff8c69, #ffa07a);
+  background-size: 400% 400%;
+  animation: gradientMove 25s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Floating Verse Animation */
+@keyframes floatVerse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Lightning Star Animation */
+@keyframes starLightning {
+  0%   { opacity: 0.2; transform: translateX(0) rotate(0deg); }
+  25%  { opacity: 0.7; transform: translateX(2px) rotate(10deg); }
+  50%  { opacity: 0.4; transform: translateX(-2px) rotate(-10deg); }
+  75%  { opacity: 0.7; transform: translateX(1px) rotate(5deg); }
+  100% { opacity: 0.2; transform: translateX(0) rotate(0deg); }
+}
+
+.verse-box {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid gold;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.5);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: floatVerse 6s ease-in-out infinite;
+}
+
+.verse-box::before,
+.verse-box::after {
+  content: "✦ ✧ ✦ ✧ ✦ ✧";
+  position: absolute;
+  font-size: 1.2rem;
+  color: gold;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  animation: starLightning 3s infinite alternate;
+}
+
+.verse-box::before { top: -15px; }
+.verse-box::after { bottom: -15px; }
+
+.verse-title { color: gold; font-size: 1.6rem; margin-bottom: 15px; }
+.verse-main { color: #fff; font-size: 1.2rem; font-style: italic; }
+
+/* Vertical Layout */
+.days-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-btn {
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.day-btn:hover {
+  background: rgba(255,215,0,0.3);
+  color: gold;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
+}
+
+.back-btn {
+  display: block;
+  margin: 40px auto 0;
+  width: fit-content;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #2c1a47;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #fff;
+  color: #ff7f50;
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+  <div class="grid">
+    <section>
+
+      <!-- Bible Verse (Foundation & Strength Theme) -->
+      <div class="verse-box">
+        <div class="verse-title">
+          📖 "By wisdom a house is built, and through understanding it is established."
+        </div>
+        <div class="verse-main">
+          — Proverbs 24:3
+        </div>
+      </div>
+
+      <!-- Page Title -->
+      <div class="page-title">🔲 Squares & Cubes Mastery</div>
+
+      <!-- Two Options -->
+      <div class="days-grid">
+
+        <a href="squares.html" class="day-btn">
+          ◼ Squares
+        </a>
+
+        <a href="cubes.html" class="day-btn">
+          🧊 Cubes
+        </a>
+
+      </div>
+
+      <a href="math.html" class="back-btn">⬅ Back to Mathematics Page</a>
+
+    </section>
+  </div>
+</main>
+
+</body>
+</html>
