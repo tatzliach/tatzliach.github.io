@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The 40-Day Journey of English Idioms</title>
+<title>40 Days Idioms Journey</title>
 
 <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
 
 <style>
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -28,19 +29,16 @@ body {
 
 .page-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 30px;
   color: #fff;
-  letter-spacing: 1px;
 }
 
-/* Floating Verse Animation */
 @keyframes floatVerse {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 
-/* Lightning Star Animation */
 @keyframes starLightning {
   0% { opacity:0.2; transform:translateX(0) rotate(0deg); }
   25% { opacity:0.7; transform:translateX(2px) rotate(10deg); }
@@ -74,8 +72,8 @@ body {
   animation: starLightning 3s infinite alternate;
 }
 
-.verse-box::before { top:-15px; }
-.verse-box::after { bottom:-15px; }
+.verse-box::before { top: -15px; }
+.verse-box::after { bottom: -15px; }
 
 .verse-title {
   color: gold;
@@ -84,64 +82,67 @@ body {
 }
 
 .verse-main {
-  color:#fff;
-  font-size:1.2rem;
+  color: #fff;
+  font-size: 1.2rem;
   font-style: italic;
 }
 
 .days-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:30px;
-  max-height:70vh;
-  overflow-y:auto;
-  padding-right:10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .day-btn {
-  padding:18px;
-  border-radius:12px;
-  font-weight:bold;
-  background:rgba(255,255,255,0.2);
-  border:1px solid rgba(255,255,255,0.3);
-  color:white;
-  text-align:center;
-  text-decoration:none;
-  transition:all 0.3s ease;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .day-btn:hover {
-  background:rgba(255,215,0,0.3);
-  color:gold;
-  transform:scale(1.05);
-  box-shadow:0 0 12px gold;
+  background: rgba(255,215,0,0.3);
+  color: gold;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
 }
 
 .back-btn {
-  display:block;
-  margin:40px auto 0;
-  width:fit-content;
-  padding:12px 25px;
-  border-radius:25px;
-  background:#2c1a47;
-  color:white;
-  font-weight:bold;
-  text-decoration:none;
-  transition:0.3s;
+  display: block;
+  margin: 40px auto 0;
+  width: fit-content;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #2c1a47;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .back-btn:hover {
-  background:#fff;
-  color:#ff7f50;
+  background: #fff;
+  color: #ff7f50;
 }
+
 </style>
 </head>
 
 <body>
 
 <main class="container">
+
 <div class="grid">
+
 <section>
 
 <div class="verse-box">
@@ -151,14 +152,14 @@ body {
 </div>
 
 <div class="verse-main">
-"Wisdom is the principal thing; therefore get wisdom:  
+"Wisdom is the principal thing; therefore get wisdom:
 and with all thy getting get understanding."
 </div>
 
 </div>
 
 <div class="page-title">
-✨ Journey of English Idioms ✨
+✨ The 40-Day Journey of English Idioms ✨
 </div>
 
 <div class="days-grid" id="daysContainer"></div>
@@ -168,7 +169,9 @@ and with all thy getting get understanding."
 </a>
 
 </section>
+
 </div>
+
 </main>
 
 <script>
@@ -181,7 +184,7 @@ for (let i = 1; i <= 40; i++) {
 
   link.className = "day-btn";
 
-  link.href = `https://tatzliach.github.io/idioms-day-${i}.html`;
+  link.href = `day--${i}.html`;   // your file format
 
   link.textContent = `Day ${i}`;
 
