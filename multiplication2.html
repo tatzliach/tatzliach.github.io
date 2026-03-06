@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplication Tables ✖</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+<style>
+:root {
+  --accent: #c21807; /* Classic red for title */
+  --light-bg: #fff9dc;
+  --light-end: #fffacd;
+  --card: rgba(255,250,200,0.82);
+  --shadow: 0 0 25px rgba(0,0,0,0.09);
+  --gold: #ffd700;
+}
+
+body {
+  margin:0; 
+  font-family:'Segoe UI',system-ui,sans-serif;
+  background:linear-gradient(to bottom,var(--light-bg),var(--light-end));
+  color:#222; 
+  text-align:center; 
+  overflow-x:hidden; 
+  position:relative;
+}
+
+.star {position:absolute; width:2px; height:2px; background:white; border-radius:50%; opacity:0; animation:twinkle 3.2s infinite;}
+@keyframes twinkle {0%,100%{opacity:0; transform:scale(0.8);} 50%{opacity:0.95; transform:scale(1.5);}}
+.stars-container {position:fixed; width:100%; height:100%; z-index:0;}
+
+header {margin-top:50px; margin-bottom:30px; position:relative; z-index:2;}
+h1 {
+  font-size:3rem; font-weight:bold; margin-bottom:10px;
+  text-shadow:0 0 15px #f0e68c; color:var(--accent);
+  border: 4px solid var(--gold);
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 15px;
+}
+
+.table-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.table-card {
+  background: var(--card);
+  padding:20px;
+  border-radius:15px;
+  margin:20px 0;
+  max-width:280px;
+  flex: 1 1 280px;
+  text-align:left;
+  box-shadow: var(--shadow);
+}
+
+.table-card h3 {
+  color:#b8860b;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+.row {display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px dashed #ffd700; font-weight:bold;}
+.row:last-child {border-bottom:none;}
+.row span {width:30px; text-align:center;}
+
+.back-btn {
+  display:inline-block;
+  margin:40px auto 0;
+  padding:12px 25px;
+  border-radius:20px;
+  background:#b8860b;
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  transition:all 0.3s ease;
+}
+.back-btn:hover {background:#ffd700; color:#333;}
+</style>
+</head>
+
+<body>
+
+<div class="stars-container"></div>
+
+<main class="container">
+<header><h1>✨ Second Multiplication Table</h1></header>
+
+<!-- Multiplication Tables in two columns -->
+
+<div class="table-row">
+
+  <div class="table-card">
+    <h3>11 × Table</h3>
+    <div class="row"><span>11</span> × <span>1</span> = <span>11</span></div>
+    <div class="row"><span>11</span> × <span>2</span> = <span>22</span></div>
+    <div class="row"><span>11</span> × <span>3</span> = <span>33</span></div>
+    <div class="row"><span>11</span> × <span>4</span> = <span>44</span></div>
+    <div class="row"><span>11</span> × <span>5</span> = <span>55</span></div>
+    <div class="row"><span>11</span> × <span>6</span> = <span>66</span></div>
+    <div class="row"><span>11</span> × <span>7</span> = <span>77</span></div>
+    <div class="row"><span>11</span> × <span>8</span> = <span>88</span></div>
+    <div class="row"><span>11</span> × <span>9</span> = <span>99</span></div>
+    <div class="row"><span>11</span> × <span>10</span> = <span>110</span></div>
+  </div>
+
+  <div class="table-card">
+    <h3>12 × Table</h3>
+    <div class="row"><span>12</span> × <span>1</span> = <span>12</span></div>
+    <div class="row"><span>12</span> × <span>2</span> = <span>24</span></div>
+    <div class="row"><span>12</span> × <span>3</span> = <span>36</span></div>
+    <div class="row"><span>12</span> × <span>4</span> = <span>48</span></div>
+    <div class="row"><span>12</span> × <span>5</span> = <span>60</span></div>
+    <div class="row"><span>12</span> × <span>6</span> = <span>72</span></div>
+    <div class="row"><span>12</span> × <span>7</span> = <span>84</span></div>
+    <div class="row"><span>12</span> × <span>8</span> = <span>96</span></div>
+    <div class="row"><span>12</span> × <span>9</span> = <span>108</span></div>
+    <div class="row"><span>12</span> × <span>10</span> = <span>120</span></div>
+  </div>
+
+</div>
+
+<div class="table-row">
+
+  <div class="table-card">
+    <h3>13 × Table</h3>
+    <div class="row"><span>13</span> × <span>1</span> = <span>13</span></div>
+    <div class="row"><span>13</span> × <span>2</span> = <span>26</span></div>
+    <div class="row"><span>13</span> × <span>3</span> = <span>39</span></div>
+    <div class="row"><span>13</span> × <span>4</span> = <span>52</span></div>
+    <div class="row"><span>13</span> × <span>5</span> = <span>65</span></div>
+    <div class="row"><span>13</span> × <span>6</span> = <span>78</span></div>
+    <div class="row"><span>13</span> × <span>7</span> = <span>91</span></div>
+    <div class="row"><span>13</span> × <span>8</span> = <span>104</span></div>
+    <div class="row"><span>13</span> × <span>9</span> = <span>117</span></div>
+    <div class="row"><span>13</span> × <span>10</span> = <span>130</span></div>
+  </div>
+
+  <div class="table-card">
+    <h3>14 × Table</h3>
+    <div class="row"><span>14</span> × <span>1</span> = <span>14</span></div>
+    <div class="row"><span>14</span> × <span>2</span> = <span>28</span></div>
+    <div class="row"><span>14</span> × <span>3</span> = <span>42</span></div>
+    <div class="row"><span>14</span> × <span>4</span> = <span>56</span></div>
+    <div class="row"><span>14</span> × <span>5</span> = <span>70</span></div>
+    <div class="row"><span>14</span> × <span>6</span> = <span>84</span></div>
+    <div class="row"><span>14</span> × <span>7</span> = <span>98</span></div>
+    <div class="row"><span>14</span> × <span>8</span> = <span>112</span></div>
+    <div class="row"><span>14</span> × <span>9</span> = <span>126</span></div>
+    <div class="row"><span>14</span> × <span>10</span> = <span>140</span></div>
+  </div>
+
+</div>
+
+<div class="table-row">
+
+  <div class="table-card">
+    <h3>15 × Table</h3>
+    <div class="row"><span>15</span> × <span>1</span> = <span>15</span></div>
+    <div class="row"><span>15</span> × <span>2</span> = <span>30</span></div>
+    <div class="row"><span>15</span> × <span>3</span> = <span>45</span></div>
+    <div class="row"><span>15</span> × <span>4</span> = <span>60</span></div>
+    <div class="row"><span>15</span> × <span>5</span> = <span>75</span></div>
+    <div class="row"><span>15</span> × <span>6</span> = <span>90</span></div>
+    <div class="row"><span>15</span> × <span>7</span> = <span>105</span></div>
+    <div class="row"><span>15</span> × <span>8</span> = <span>120</span></div>
+    <div class="row"><span>15</span> × <span>9</span> = <span>135</span></div>
+    <div class="row"><span>15</span> × <span>10</span> = <span>150</span></div>
+  </div>
+
+  <div class="table-card">
+    <h3>16 × Table</h3>
+    <div class="row"><span>16</span> × <span>1</span> = <span>16</span></div>
+    <div class="row"><span>16</span> × <span>2</span> = <span>32</span></div>
+    <div class="row"><span>16</span> × <span>3</span> = <span>48</span></div>
+    <div class="row"><span>16</span> × <span>4</span> = <span>64</span></div>
+    <div class="row"><span>16</span> × <span>5</span> = <span>80</span></div>
+    <div class="row"><span>16</span> × <span>6</span> = <span>96</span></div>
+    <div class="row"><span>16</span> × <span>7</span> = <span>112</span></div>
+    <div class="row"><span>16</span> × <span>8</span> = <span>128</span></div>
+    <div class="row"><span>16</span> × <span>9</span> = <span>144</span></div>
+    <div class="row"><span>16</span> × <span>10</span> = <span>160</span></div>
+  </div>
+
+</div>
+
+<div class="table-row">
+
+  <div class="table-card">
+    <h3>17 × Table</h3>
+    <div class="row"><span>17</span> × <span>1</span> = <span>17</span></div>
+    <div class="row"><span>17</span> × <span>2</span> = <span>34</span></div>
+    <div class="row"><span>17</span> × <span>3</span> = <span>51</span></div>
+    <div class="row"><span>17</span> × <span>4</span> = <span>68</span></div>
+    <div class="row"><span>17</span> × <span>5</span> = <span>85</span></div>
+    <div class="row"><span>17</span> × <span>6</span> = <span>102</span></div>
+    <div class="row"><span>17</span> × <span>7</span> = <span>119</span></div>
+    <div class="row"><span>17</span> × <span>8</span> = <span>136</span></div>
+    <div class="row"><span>17</span> × <span>9</span> = <span>153</span></div>
+    <div class="row"><span>17</span> × <span>10</span> = <span>170</span></div>
+  </div>
+
+  <div class="table-card">
+    <h3>18 × Table</h3>
+    <div class="row"><span>18</span> × <span>1</span> = <span>18</span></div>
+    <div class="row"><span>18</span> × <span>2</span> = <span>36</span></div>
+    <div class="row"><span>18</span> × <span>3</span> = <span>54</span></div>
+    <div class="row"><span>18</span> × <span>4</span> = <span>72</span></div>
+    <div class="row"><span>18</span> × <span>5</span> = <span>90</span></div>
+    <div class="row"><span>18</span> × <span>6</span> = <span>108</span></div>
+    <div class="row"><span>18</span> × <span>7</span> = <span>126</span></div>
+    <div class="row"><span>18</span> × <span>8</span> = <span>144</span></div>
+    <div class="row"><span>18</span> × <span>9</span> = <span>162</span></div>
+    <div class="row"><span>18</span> × <span>10</span> = <span>180</span></div>
+  </div>
+
+</div>
+
+<div class="table-row">
+
+  <div class="table-card">
+    <h3>19 × Table</h3>
+    <div class="row"><span>19</span> × <span>1</span> = <span>19</span></div>
+    <div class="row"><span>19</span> × <span>2</span> = <span>38</span></div>
+    <div class="row"><span>19</span> × <span>3</span> = <span>57</span></div>
+    <div class="row"><span>19</span> × <span>4</span> = <span>76</span></div>
+    <div class="row"><span>19</span> × <span>5</span> = <span>95</span></div>
+    <div class="row"><span>19</span> × <span>6</span> = <span>114</span></div>
+    <div class="row"><span>19</span> × <span>7</span> = <span>133</span></div>
+    <div class="row"><span>19</span> × <span>8</span> = <span>152</span></div>
+    <div class="row"><span>19</span> × <span>9</span> = <span>171</span></div>
+    <div class="row"><span>19</span> × <span>10</span> = <span>190</span></div>
+  </div>
+
+  <div class="table-card">
+    <h3>20 × Table</h3>
+    <div class="row"><span>20</span> × <span>1</span> = <span>20</span></div>
+    <div class="row"><span>20</span> × <span>2</span> = <span>40</span></div>
+    <div class="row"><span>20</span> × <span>3</span> = <span>60</span></div>
+    <div class="row"><span>20</span> × <span>4</span> = <span>80</span></div>
+    <div class="row"><span>20</span> × <span>5</span> = <span>100</span></div>
+    <div class="row"><span>20</span> × <span>6</span> = <span>120</span></div>
+    <div class="row"><span>20</span> × <span>7</span> = <span>140</span></div>
+    <div class="row"><span>20</span> × <span>8</span> = <span>160</span></div>
+    <div class="row"><span>20</span> × <span>9</span> = <span>180</span></div>
+    <div class="row"><span>20</span> × <span>10</span> = <span>200</span></div>
+  </div>
+
+</div>
+
+<a href="multiplication.html" class="back-btn">⬅ Back to Multiplication Options</a>
+</main>
+
+<script>
+const container = document.querySelector('.stars-container');
+for(let i=0;i<50;i++){
+  const star=document.createElement('div');
+  star.classList.add('star');
+  star.style.top=Math.random()*100+'%';
+  star.style.left=Math.random()*100+'%';
+  star.style.animationDelay=Math.random()*3.5+'s';
+  container.appendChild(star);
+}
+</script>
+
+</body>
+</html>
