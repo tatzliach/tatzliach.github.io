@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 21 - Temporals</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<style>
+body{
+  margin:0;
+  font-family:Georgia,serif;
+  color:#222;
+  text-align:center;
+  background:linear-gradient(to bottom,#fff9dc,#ffe6cc);
+}
+header{margin:50px 0 30px;}
+header h1{
+  font-size:3rem;
+  font-weight:bold;
+  color:#d35400;
+  text-shadow:0 0 15px #f0e68c;
+}
+.highlighted-text{
+  font-size:2rem;
+  font-weight:bold;
+  color:#d35400;
+  margin:20px auto;
+  max-width:650px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,250,200,0.8);
+  box-shadow:0 0 25px rgba(0,0,0,0.1);
+}
+.verse{
+  font-size:1.4rem;
+  font-style:italic;
+  margin:25px auto;
+  max-width:850px;
+  background:rgba(255,215,0,0.08);
+  border:2px solid gold;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(255,215,0,0.4);
+}
+.description-box{
+  font-size:1.1rem;
+  margin:25px auto;
+  max-width:850px;
+  text-align:left;
+  background:rgba(255,250,200,0.8);
+  padding:25px;
+  border-radius:20px;
+  line-height:1.7;
+}
+.expression-list{
+  margin:30px auto 50px auto;
+  max-width:800px;
+  text-align:left;
+  font-size:1.05rem;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.7);
+  box-shadow:0 0 25px rgba(0,0,0,0.05);
+}
+.expression-list li{
+  margin:20px 0;
+  padding-left:12px;
+  border-left:4px solid #ffd700;
+}
+.word{
+  color:#c0392b;
+  font-weight:bold;
+  font-size:1.2rem;
+}
+.meaning{
+  color:#000;
+}
+.topic-highlight{
+  font-size:1.4rem;
+  font-weight:bold;
+  color:#c0392b;
+  margin:20px 0 10px 0;
+  display:block;
+}
+.to-remember{
+  margin-top:50px;
+}
+.to-remember h3{
+  font-size:2rem;
+  color:#d35400;
+}
+.to-remember h4{
+  font-size:1.5rem;
+  color:#000;
+}
+.to-remember-list{
+  margin:25px auto;
+  max-width:800px;
+  text-align:left;
+  padding:25px;
+  border-radius:20px;
+  background:#ffffff;
+  color:#000;
+}
+.to-remember-list li{
+  margin:14px 0;
+  border-left:4px solid #ffd700;
+  padding-left:10px;
+}
+footer{
+  margin:40px 0;
+  font-size:1rem;
+  color:#555;
+}
+</style>
+</head>
+<body>
+<main class="container">
+
+<header>
+<h1>✨ Day 21 ✨</h1>
+</header>
+
+<div class="highlighted-text">
+Temporals ⏰<br>
+<span style="font-size:1.6rem;font-weight:normal;">Time Expressions for Past, Present, Future, Frequency, and Duration</span>
+</div>
+
+<div class="verse">
+"Teach us to number our days, that we may gain a heart of wisdom." <br>
+<span style="font-weight:bold;color:#d35400;">Psalm 90:12</span> 🙏
+</div>
+
+<div class="description-box">
+Temporals হলো এমন শব্দ বা phrases যা সময় নির্দেশ করে।  
+এগুলো **কথোপকথনকে স্পষ্ট এবং স্বাভাবিক** করে তোলে। 🕒
+</div>
+
+<!-- Basic Time -->
+<div class="topic-highlight">✅ Basic Time 🌞</div>
+<ul class="expression-list">
+<li><span class="word">Now 🕰️</span><br><span class="meaning">I am busy now.</span></li>
+<li><span class="word">Today 📅</span><br><span class="meaning">We will meet today.</span></li>
+<li><span class="word">Tomorrow 🌄</span><br><span class="meaning">She will come tomorrow.</span></li>
+<li><span class="word">Yesterday ⏳</span><br><span class="meaning">I saw him yesterday.</span></li>
+<li><span class="word">Tonight 🌙</span><br><span class="meaning">We will watch a movie tonight.</span></li>
+<li><span class="word">This morning ☀️</span><br><span class="meaning">I met her this morning.</span></li>
+<li><span class="word">This afternoon 🌤️</span><br><span class="meaning">We will study this afternoon.</span></li>
+<li><span class="word">This evening 🌇</span><br><span class="meaning">I will call you this evening.</span></li>
+<li><span class="word">Last night 🌙</span><br><span class="meaning">It rained last night.</span></li>
+<li><span class="word">Next week 📆</span><br><span class="meaning">We will travel next week.</span></li>
+</ul>
+
+<!-- Frequency -->
+<div class="topic-highlight">✅ Frequency 🔁</div>
+<ul class="expression-list">
+<li><span class="word">Always 🔥</span><br><span class="meaning">He always wakes up early.</span></li>
+<li><span class="word">Usually 👍</span><br><span class="meaning">I usually drink coffee in the morning.</span></li>
+<li><span class="word">Often ⏰</span><br><span class="meaning">We often go to the park.</span></li>
+<li><span class="word">Sometimes 🌤️</span><br><span class="meaning">She sometimes helps me.</span></li>
+<li><span class="word">Rarely ❄️</span><br><span class="meaning">He rarely eats fast food.</span></li>
+<li><span class="word">Never 🚫</span><br><span class="meaning">I never lie.</span></li>
+<li><span class="word">Every day 📅</span><br><span class="meaning">I read every day.</span></li>
+<li><span class="word">Once a week 🗓️</span><br><span class="meaning">We meet once a week.</span></li>
+<li><span class="word">Twice a month 📝</span><br><span class="meaning">She visits twice a month.</span></li>
+<li><span class="word">Frequently 🔄</span><br><span class="meaning">He frequently travels abroad.</span></li>
+</ul>
+
+<!-- Duration -->
+<div class="topic-highlight">✅ Duration ⌛</div>
+<ul class="expression-list">
+<li><span class="word">For 2 hours ⏱️</span><br><span class="meaning">I studied for 2 hours.</span></li>
+<li><span class="word">Since morning 🌅</span><br><span class="meaning">He has been working since morning.</span></li>
+<li><span class="word">During the day 🌞</span><br><span class="meaning">I slept during the day.</span></li>
+<li><span class="word">All night 🌙</span><br><span class="meaning">They talked all night.</span></li>
+<li><span class="word">All day 🌞</span><br><span class="meaning">I was busy all day.</span></li>
+<li><span class="word">From morning till night 🌄</span><br><span class="meaning">She worked from morning till night.</span></li>
+<li><span class="word">For a week 🗓️</span><br><span class="meaning">We stayed in London for a week.</span></li>
+<li><span class="word">Since last year 📆</span><br><span class="meaning">I have lived here since last year.</span></li>
+<li><span class="word">During the meeting 🏢</span><br><span class="meaning">He stayed quiet during the meeting.</span></li>
+<li><span class="word">Until evening 🌇</span><br><span class="meaning">I will wait until evening.</span></li>
+</ul>
+
+<div class="to-remember">
+<h3>To Remember 📌</h3>
+<h4>স্মরণীয়</h4>
+<ul class="to-remember-list">
+<li>Temporals নির্দেশ করে **কখন বা কতক্ষণ কোনো কাজ হয়েছে/হচ্ছে/হবে** 🕒</li>
+<li>Basic temporals → Now, Today, Tomorrow, Yesterday, Tonight 🌞</li>
+<li>Frequency temporals → Always, Usually, Sometimes, Never 🔁</li>
+<li>Duration temporals → For, Since, During, All day/night ⌛</li>
+<li>Proper ব্যবহার করলে **বাক্য স্পষ্ট ও স্বাভাবিক হয়** ✅</li>
+</ul>
+</div>
+
+<footer>
+© 2026 Tatzliach Education ✨
+</footer>
+
+</main>
+</body>
+</html>
