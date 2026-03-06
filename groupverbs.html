@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>60 Days Phrasal Verbs Journey</title>
+
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+
+<style>
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #2c1a47;
+  background: linear-gradient(-45deg, #ff7f50, #ff6f61, #ff8c69, #ffa07a);
+  background-size: 400% 400%;
+  animation: gradientMove 25s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+@keyframes floatVerse {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes starLightning {
+  0% { opacity:0.2; transform:translateX(0) rotate(0deg); }
+  25% { opacity:0.7; transform:translateX(2px) rotate(10deg); }
+  50% { opacity:0.4; transform:translateX(-2px) rotate(-10deg); }
+  75% { opacity:0.7; transform:translateX(1px) rotate(5deg); }
+  100% { opacity:0.2; transform:translateX(0) rotate(0deg); }
+}
+
+.verse-box {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid gold;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.5);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: floatVerse 6s ease-in-out infinite;
+}
+
+.verse-box::before,
+.verse-box::after {
+  content: "✦ ✧ ✦ ✧ ✦ ✧";
+  position: absolute;
+  font-size: 1.2rem;
+  color: gold;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  animation: starLightning 3s infinite alternate;
+}
+
+.verse-box::before { top: -15px; }
+.verse-box::after { bottom: -15px; }
+
+.verse-title {
+  color: gold;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.verse-main {
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.day-btn {
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.day-btn:hover {
+  background: rgba(255,215,0,0.3);
+  color: gold;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
+}
+
+.back-btn {
+  display: block;
+  margin: 40px auto 0;
+  width: fit-content;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #2c1a47;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #fff;
+  color: #ff7f50;
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="container">
+<div class="grid">
+<section>
+
+<div class="verse-box">
+<div class="verse-title">📖 Proverbs 16:3</div>
+<div class="verse-main">
+"Commit thy works unto the Lord,
+and your thoughts shall be established."
+</div>
+</div>
+
+<div class="page-title">
+✨ Journey of English Phrasal Verbs ✨
+</div>
+
+<div class="days-grid">
+
+<a class="day-btn" href="day_1.html">Day 1</a>
+<a class="day-btn" href="day_2.html">Day 2</a>
+<a class="day-btn" href="day_3.html">Day 3</a>
+<a class="day-btn" href="day_4.html">Day 4</a>
+<a class="day-btn" href="day_5.html">Day 5</a>
+<a class="day-btn" href="day_6.html">Day 6</a>
+<a class="day-btn" href="day_7.html">Day 7</a>
+<a class="day-btn" href="day_8.html">Day 8</a>
+<a class="day-btn" href="day_9.html">Day 9</a>
+<a class="day-btn" href="day_10.html">Day 10</a>
+
+<a class="day-btn" href="day_11.html">Day 11</a>
+<a class="day-btn" href="day_12.html">Day 12</a>
+<a class="day-btn" href="day_13.html">Day 13</a>
+<a class="day-btn" href="day_14.html">Day 14</a>
+<a class="day-btn" href="day_15.html">Day 15</a>
+<a class="day-btn" href="day_16.html">Day 16</a>
+<a class="day-btn" href="day_17.html">Day 17</a>
+<a class="day-btn" href="day_18.html">Day 18</a>
+<a class="day-btn" href="day_19.html">Day 19</a>
+<a class="day-btn" href="day_20.html">Day 20</a>
+
+<a class="day-btn" href="day_21.html">Day 21</a>
+<a class="day-btn" href="day_22.html">Day 22</a>
+<a class="day-btn" href="day_23.html">Day 23</a>
+<a class="day-btn" href="day_24.html">Day 24</a>
+<a class="day-btn" href="day_25.html">Day 25</a>
+<a class="day-btn" href="day_26.html">Day 26</a>
+<a class="day-btn" href="day_27.html">Day 27</a>
+<a class="day-btn" href="day_28.html">Day 28</a>
+<a class="day-btn" href="day_29.html">Day 29</a>
+<a class="day-btn" href="day_30.html">Day 30</a>
+
+<a class="day-btn" href="day_31.html">Day 31</a>
+<a class="day-btn" href="day_32.html">Day 32</a>
+<a class="day-btn" href="day_33.html">Day 33</a>
+<a class="day-btn" href="day_34.html">Day 34</a>
+<a class="day-btn" href="day_35.html">Day 35</a>
+<a class="day-btn" href="day_36.html">Day 36</a>
+<a class="day-btn" href="day_37.html">Day 37</a>
+<a class="day-btn" href="day_38.html">Day 38</a>
+<a class="day-btn" href="day_39.html">Day 39</a>
+<a class="day-btn" href="day_40.html">Day 40</a>
+
+<a class="day-btn" href="day_41.html">Day 41</a>
+<a class="day-btn" href="day_42.html">Day 42</a>
+<a class="day-btn" href="day_43.html">Day 43</a>
+<a class="day-btn" href="day_44.html">Day 44</a>
+<a class="day-btn" href="day_45.html">Day 45</a>
+<a class="day-btn" href="day_46.html">Day 46</a>
+<a class="day-btn" href="day_47.html">Day 47</a>
+<a class="day-btn" href="day_48.html">Day 48</a>
+<a class="day-btn" href="day_49.html">Day 49</a>
+<a class="day-btn" href="day_50.html">Day 50</a>
+
+<a class="day-btn" href="day_51.html">Day 51</a>
+<a class="day-btn" href="day_52.html">Day 52</a>
+<a class="day-btn" href="day_53.html">Day 53</a>
+<a class="day-btn" href="day_54.html">Day 54</a>
+<a class="day-btn" href="day_55.html">Day 55</a>
+<a class="day-btn" href="day_56.html">Day 56</a>
+<a class="day-btn" href="day_57.html">Day 57</a>
+<a class="day-btn" href="day_58.html">Day 58</a>
+<a class="day-btn" href="day_59.html">Day 59</a>
+<a class="day-btn" href="day_60.html">Day 60</a>
+
+</div>
+
+<a href="index.html" class="back-btn">⬅ Back to English Learning Page</a>
+
+</section>
+</div>
+</main>
+
+</body>
+</html>
