@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Formulas of Mathematics</title>
-<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
 <style>
 html { scroll-behavior: smooth; }
@@ -32,13 +33,11 @@ body {
   color: #fff;
 }
 
-/* Floating Verse Animation */
 @keyframes floatVerse {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 
-/* Lightning Star Animation */
 @keyframes starLightning {
   0%   { opacity: 0.2; transform: translateX(0) rotate(0deg); }
   25%  { opacity: 0.7; transform: translateX(2px) rotate(10deg); }
@@ -78,7 +77,6 @@ body {
 .verse-title { color: gold; font-size: 1.6rem; margin-bottom: 15px; }
 .verse-main { color: #fff; font-size: 1.2rem; font-style: italic; }
 
-/* Vertical Layout */
 .days-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -135,7 +133,7 @@ body {
   <div class="grid">
     <section>
 
-      <!-- Bible Verse (Order & Wisdom Theme) -->
+      <!-- Verse -->
       <div class="verse-box">
         <div class="verse-title">
           📖 "But everything should be done in a fitting and orderly way."
@@ -145,21 +143,21 @@ body {
         </div>
       </div>
 
-      <!-- Page Title -->
+      <!-- Title -->
       <div class="page-title">📘 Formulas of Mathematics</div>
 
-      <!-- Two Options -->
+      <!-- Buttons with Working Links -->
       <div class="days-grid">
 
-        <a href="algebraic-formulas.html" class="day-btn">
+        <a href="formula.html" class="day-btn">
           🧮 Algebraic Formulas
         </a>
 
-        <a href="geometric-formulas.html" class="day-btn">
-         📏 Geometric Formulas
+        <a href="formula.html" class="day-btn">
+          📏 Geometric Formulas
         </a>
 
-        <a href="trigonometry-formulas.html" class="day-btn">
+        <a href="formula.html" class="day-btn">
           📐 Trigonometric Identities
         </a>
 
@@ -172,4 +170,4 @@ body {
 </main>
 
 </body>
-</html>
+  </html>
